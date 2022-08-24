@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.btn-black {
+    background-color: #000;
+    color: white;
+}
+
+.shop-button {
+    background-color: #000;
+    color: white;
+    border: 2px solid yellow;
+}
+
+.shop-button:hover {
+    background-color: white;
+    color: black;
+}
