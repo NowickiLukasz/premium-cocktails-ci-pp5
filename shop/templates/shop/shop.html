@@ -2,55 +2,54 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-4">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4">
+            <a href="">
+                <div class="card">
+                    <img src="{% static 'img/images-bottled-drinks/expresso-martini.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black text-center">Cocktails</h5>
+                        <!-- <p class="card-text text-black">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </a>
+        </div>
+        <div class="col mb-4">
+            <a href="">
+                <div class="card">
+                    <img src="{% static 'img/images-books/bartenders-guide.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black text-center">Books</h5>
+                        <!-- <p class="card-text text-black">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </a>
+            
+        </div>
+        <div class="col mb-4">
+            <a href="">
+                <div class="card">
+                    <img src="{% static 'img/images-drinks/card.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black text-center">Recipes</h5>
+                        <!-- <p class="card-text text-black">This is a longer card with supporting text below as a natural lead-in to additional content.</p> -->
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            </a>
+            
+        </div>
     </div>
-        
+</div>
+
 
 {% endblock %}
