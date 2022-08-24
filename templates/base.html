@@ -46,6 +46,77 @@
     {% endif %}
 
     {% block page_header %}
+        <header class="container-fluid fixed-top">
+            
+            <div class="row">
+                
+                <!-- Header Logo -->
+                <div class="col-12 col-lg-4 text-center">
+                    <a href="" class="nav-link logo-link">
+                        <h2 class="logo-font text-black"><strong>Premium Cocktails</strong></h2>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="col-12 col-lg-4 text-center">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Nav bar link -->
+                <div class="col-12 col-lg-4 text-center">
+                    <ul class="list-inline list-unstyled text-center">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user"></i></div>
+                                    <p>Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                {% if user.is_authenticated %}
+                                    {% if user.is_superuser %}
+                                        <a href="" class="dropdown-item">Shop Management</a>
+                                    {% endif %}
+                                    <a href="" class="dropdown-item">Profile</a>
+                                    <a href="" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %} text-info font-weight-bold {% else %} text-black {% endif %} nav-link" href="">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag"></i></div>
+                                    <p>
+                                        {% if grand_total %}
+                                            €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            €0.00
+                                        {% endif %}
+
+                                    </p>
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
     {% endblock %}
 
     {% block content %}
