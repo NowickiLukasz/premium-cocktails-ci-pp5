@@ -3,10 +3,14 @@ html {
 }
 
 body {
-    background: url('/media/homepage-background.jpg') no-repeat center center fixed;
+    background: url('/media/homepage-background.jpg') no-repeat center center;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Noto Sans', sans-serif;
+}
+
+.hero-text {
+    margin-top: 150px;
 }
 
 .logo-font {
@@ -40,3 +44,7 @@ body {
     background-color: white;
     color: black;
 }
+
+/* .social-links {
+    background-color: white;
+} */
