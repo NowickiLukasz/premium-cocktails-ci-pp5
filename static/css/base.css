@@ -49,9 +49,10 @@ body {
     color: black;
 }
 
-/* .social-links {
-    background-color: white;
-} */
+.social-links {
+    background-color: plum;
+    height: 50px;
+}
 
 .overlay {
     height:100%;
