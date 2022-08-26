@@ -6,3 +6,6 @@ If the user wishes, they may create an account, which will allow the user to vie
 1. 
 Images would not load. 
 - found that i needed to have an if statement to load images if there was no image loaded for a certain item the page qould crash
+
+2. Needs to be fixed 
+- header section is very tall

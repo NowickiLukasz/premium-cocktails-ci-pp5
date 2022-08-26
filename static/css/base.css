@@ -12,7 +12,7 @@ body {
     
 }
 
-
+/* Text styling */
 .hero-text {
     margin-top: 150px;
 }
@@ -31,6 +31,18 @@ body {
 
 .main-logo-link {
     width: fit-content;
+}
+
+.header-page-text {
+    position: relative;
+}
+
+/* Buttons */
+
+.add-to-basket-btn:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .btn-black {
@@ -54,6 +66,7 @@ body {
     height: 50px;
 }
 
+/* Sets background of page to white  */
 .overlay {
     height:100%;
     width: 100%;
@@ -63,4 +76,3 @@ body {
     background-color: white;
     z-index: -1;
 }
-

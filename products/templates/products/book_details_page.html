@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <h1 class="text-center bg-dark text-white">{{ book.name }}</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                {% if book.image %}
+                    <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.name }}">
+                {% endif %}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h3 class="text-black mb-4">Name: <span class="float-right">{{book.name}}</span></h3>
+                
+                <p class="text-black mb-4">Price: <span class="float-right">€{{book.price}}</span></p>
+                <p class="text-black mb-4">ABV: <span class="float-right">{{book.abv}} %</span></p>
+                <p class="text-black mb-4">description:</p>
+                <p class="text-black">{{ book.description }}</p>
+                
+                
+            </div>
+            
+           
+            <!-- Add to basket button -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="">
+                    <button class="btn btn-lg btn-black rounded-0 w-100 add-to-basket-btn ">Add to basket</button>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+
+{% endblock %}

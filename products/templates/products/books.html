@@ -12,17 +12,18 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
+        <h1 class="text-black text-center header-page-text">Books</h1>
         <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2">
-            {% for product in products %}
+            {% for book in books %}
                 <div class="col mb-4">
-                    <a href="">
+                    <a href="{% url 'book_details_page' book.id %}">
                         <div class="card">
-                            <!-- {% if product.image %} -->
-                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                            <!-- {% endif %} -->
+                            {% if book.image %}
+                            <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.name }}">
+                            {% endif %}
                             <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
-                            <p class="card-text">€{{ product.price }}</p>
+                            <h5 class="card-title text-black text-center">{{ book.name }}</h5>
+                            <p class="card-text text-black text-center">€{{ book.price }}</p>
                             </div>
                         </div>
                     </a>
