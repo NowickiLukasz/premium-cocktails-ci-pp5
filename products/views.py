@@ -6,7 +6,7 @@ from .models import Product
 
 def all_products(request):
     """
-    A view to show image links to products, books or recipes
+    A view showing search results from query in search bar
     """
 
     products = Product.objects.all()
