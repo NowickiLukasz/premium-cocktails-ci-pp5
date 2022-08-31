@@ -109,6 +109,21 @@
 
                 </div>
             </div>
+            <div class="row bg-white pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 text-center btn-black w-100">
+                    <a class="text-white" data-toggle="dropdown">
+                        All products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="all-products-link">
+                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By price(low to high)</a>
+                        <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By price(high to low)</a>
+                        <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">By name(A-Z)</a>
+                        <a href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item">By price(Z-A)</a>
+                    </div>
+
+                </div>
+            </div>
+
             <div class="row bg-white">
                 <nav class="navbar navbar-expand-lg navbar-light w-100">
                     {% include 'includes/mobile-top-header.html' %}
