@@ -1,4 +1,4 @@
-def bag_content(request):
+def basket_content(request):
 
     bag_items = []
     total = 0

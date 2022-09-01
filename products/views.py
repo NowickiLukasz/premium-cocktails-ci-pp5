@@ -81,15 +81,15 @@ def all_books(request):
     return render(request, 'products/books.html', context)
 
 
-def book_details_page(request, product_id):
+def product_details_page(request, product_id):
     """
     Displays details of a single book item.
     """
 
-    book = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     
     context = {
-        'book': book,
+        'product': product,
     }
 
     return render(request, 'products/book_details_page.html', context)

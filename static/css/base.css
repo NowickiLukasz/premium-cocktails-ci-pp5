@@ -50,13 +50,15 @@ body {
     color: white;
 }
 
-.shop-button {
+.shop-button, 
+.add-to-basket-button {
     background-color: #000;
     color: white;
     border: 2px solid yellow;
 }
 
-.shop-button:hover {
+.shop-button:hover, 
+.add-to-basket-button:hover {
     background-color: white;
     color: black;
 }
