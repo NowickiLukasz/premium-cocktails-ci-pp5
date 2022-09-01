@@ -15,7 +15,7 @@ def basket_content(request):
         basket_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'products': product,
+            'product': product,
         })
 
     context = {
