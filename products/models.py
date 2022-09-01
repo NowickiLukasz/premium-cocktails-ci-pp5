@@ -18,6 +18,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     description = models.TextField()
     abv = models.DecimalField(max_digits=3, decimal_places=1)
+    has_abv = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
         return self.name

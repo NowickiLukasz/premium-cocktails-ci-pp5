@@ -40,6 +40,7 @@
                                     </td>
                                     <td>
                                         <p><strong>{{ item.product.name }}</strong></p>
+                                        <p><strong>ABV:</strong>{% if item.product.has_abv %} {{ item.product.abv|upper }}%{% else %} N/A {% endif %}</strong></p>
                                     </td>
                                     <td>
                                         <p>{{ item.product.price }}</p>

@@ -23,8 +23,13 @@
                 <h3 class="text-black mb-4">Name: <span class="float-right">{{product.name}}</span></h3>
                 
                 <p class="text-black mb-4">Price: <span class="float-right">€{{product.price}}</span></p>
-                <p class="text-black mb-4">ABV: <span class="float-right">{{product.abv}} %</span></p>
-                <p class="text-black mb-4">description:</p>
+                {% with product.has_abv as v %}
+                {% if v %}
+                    <p class="text-black mb-4">ABV: <span class="float-right">{{product.abv}} %</span></p>
+                {% endif %}
+                {% endwith %}
+                
+                <p class="text-black mb-4">Description:</p>
                 <p class="text-black">{{ product.description }}</p>
                 
                 
