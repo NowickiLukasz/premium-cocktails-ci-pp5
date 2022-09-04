@@ -74,6 +74,13 @@ body {
     height: 50px;
 }
 
+/* link cursors */
+
+.remove-link,
+.update-link {
+    cursor: pointer;
+}
+
 /* Sets background of page to white  */
 .overlay {
     height:100%;

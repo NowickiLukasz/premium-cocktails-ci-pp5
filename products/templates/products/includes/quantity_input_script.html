@@ -7,6 +7,9 @@
         var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
         var currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
+        var itemId = $(this).data('item_id');
+        disablePlusMinus(itemId)
+
     })
 
     // decrement button functioin
@@ -15,10 +18,13 @@
         var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
         var currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);
+        var itemId = $(this).data('item_id');
+        disablePlusMinus(itemId)
+        
     })
 
     // handled the disabling of button if below or above the default numbers
-    function disableOverUnderQuantity(itemId) {
+    function disablePlusMinus(itemId) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
@@ -30,12 +36,12 @@
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
         var itemId = $(allQtyInputs[i]).data('item_id');
-        disableOverUnderQuantity(itemId);
+        disablePlusMinus(itemId);
     }
 
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
-        disableOverUnderQuantity(itemId);
+        disablePlusMinus(itemId);
     });
 </script>
