@@ -22,9 +22,11 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
+        messages.success(request, f'Updated {product.name} quantity to "{basket[item_id]}"')
+
     else:
         basket[item_id] = quantity
-        messages.error(request, f'Added {product.name} to your basket')
+        messages.success(request, f'Added {product.name} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
@@ -35,13 +37,17 @@ def adjust_basket(request, item_id):
     Adjust amount of items in the basket
     """
 
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
     if quantity > 0:
         basket[item_id] = quantity
+        messages.success(request, f'Updated {product.name} quantity to "{basket[item_id]}"')
+        
     else:
-        del basket[item_id]
+        basket.pop(item_id)
+        messages.success(request, f'Removed {product.name} from the basket')
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
@@ -51,10 +57,12 @@ def remove_item_from_basket(request, item_id):
     """
     Removes the selected item from the basket
     """
-
+    product = Product.objects.get(pk=item_id)
     basket = request.session.get('basket', {})
 
     basket.pop(item_id)
+    messages.success(request, f'Removed {product.name} from the basket')
+
 
     request.session['basket'] = basket
     return HttpResponse(status=200)

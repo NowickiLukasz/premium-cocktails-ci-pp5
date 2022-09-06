@@ -8,6 +8,36 @@
         </button>
     </div>
     <div class="toast-body bg-white">
-        {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr>                
+            </div>
+        </div>
+        {% if grand_total %}
+            <div class="basket-notification-wrapper"> 
+                <p>Your Bag: {{ product_count }} Items</p>
+                {% for item in basket_items %}
+                    
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="w-100" src="{{ item.product.image.url }}">
+                        </div>
+                        
+                        <div class="col-9">
+                            <p><strong>{{ item.product.name }}</strong></p>
+                            <p>Quantity: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><strong>Total: €{{ total|floatformat:2 }}</strong></p>
+                    <a href="{% url 'view_basket' %}" class="btn btn-black w-100">Secure Checkout</a>
+                </div>
+            </div>
+        {% endif%}
     </div>
 </div>
