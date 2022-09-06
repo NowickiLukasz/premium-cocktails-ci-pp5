@@ -61,6 +61,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'premium_cocktails.urls'
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

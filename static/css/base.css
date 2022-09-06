@@ -39,6 +39,20 @@ body {
 
 /* Buttons */
 
+.all-products:hover {
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid yellow;
+}
+
+.all-products {
+    color: white;
+    background: black;
+    border: 2px solid yellow;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .add-to-basket-btn:hover {
     color: black;
     background-color: white;
@@ -90,4 +104,22 @@ body {
     position: fixed;
     background-color: white;
     z-index: -1;
+}
+
+/* Toast positioning */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999;
+
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
