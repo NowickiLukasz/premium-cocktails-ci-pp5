@@ -12,4 +12,7 @@ Images would not load.
 - header section is very tall
 
 3. Sorting function would not work throught te development. 
-- Had to place the category into the products view rather than the shop one 
+- Had to place the category into the products view rather than the shop one
+
+4. overlay bug-  checkout 
+-  - dont know how to fix 
