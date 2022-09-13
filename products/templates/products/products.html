@@ -52,16 +52,28 @@
                     <a href="{% url 'product_details_page' product.id %}">
                         <div class="card">
                             {% if product.image %}
-                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             {% endif %}
+                            
                             <div class="card-body">
                             <h5 class="card-title text-black text-center">{{ product.name }}</h5>
                             <p class="card-text text-black text-center">€{{ product.price }}</p>
                             </div>
                         </div>
                     </a>
+                    {% if request.user.is_superuser %}
+                    <small>
+                        <a href="{% url 'edit_product' product.id %}">Edit</a>
+                        <a class="text-danger float-right" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
+                    
+                    {% endif %}
+                    
                 </div>
             {% endfor %}
+            
     </div>
     
 

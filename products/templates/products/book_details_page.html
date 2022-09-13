@@ -15,11 +15,19 @@
         <h1 class="text-center bg-dark text-white">{{ product.name }}</h1>
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12">
+                <small>
+                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
                 {% if product.image %}
                     <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
                 {% else %}
                 <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 {% endif %}
+                 <small>
+                        <a href="{% url 'edit_product' product.id %}">Edit</a>
+                        <a class="text-danger float-right" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <h3 class="text-black mb-4">Name: <span class="float-right">{{product.name}}</span></h3>
