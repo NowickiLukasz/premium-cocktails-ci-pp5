@@ -47,7 +47,7 @@ This is the [live link]() for the site - need to isert link
     - I want to be able to edit information on my account.
     - I want to be able to view my order history.
     - I want to be able to login and logout.
-    - I want to be able to leave reviews on products.
+    - I want to be able to leave, edit and delete reviews on products.
     - I want to be able to see instructions appear to notify me if I have succeeded in posting a comment or review etc.
     - I want to be able to add products to my shopping basket.
     - I want to be able to view my shopping basket.
