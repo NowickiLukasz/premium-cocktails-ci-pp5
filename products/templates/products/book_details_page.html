@@ -17,6 +17,8 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 {% if product.image %}
                     <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                {% else %}
+                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
