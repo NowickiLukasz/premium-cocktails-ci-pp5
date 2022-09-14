@@ -10,11 +10,42 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row container">
-        <div class="col">
-            <h1>Recipes</h1>
-        </div>
+    <div class="overlay"></div>
+    <div class="container-fluid">
+
+
+
+
+        <!-- add dynamic title for products to books or cocktails -->
+
+
+
+        
+        <h1 class="text-black text-center header-page-text">Products</h1> 
+        
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2">
+            {% for recipe in recipes %}
+                <div class="col mb-4">
+                    <a href="{% url 'recipe_details' recipe.id %}">
+                        <div class="card">
+                            {% if product.image %}
+                                <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ recipe.name }}">
+                            {% endif %}
+                            
+                            <div class="card-body">
+                            <h5 class="card-title text-black text-center">{{ recipe.name }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                </div>
+            {% endfor %}
+            
     </div>
     
 
 {% endblock %}
+

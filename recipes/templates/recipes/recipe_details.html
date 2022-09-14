@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-12 col-md-6 col-sm-12">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            {% else %}
+                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+            {% endif %}
+        </div>
+        <div class="col-12 col-md-6 col-sm-12">
+            <h3 class="text-black mb-4">Name: <span class="float-right">{{recipe.name}}</span></h3>
+            <h4 class="text-black mb-4">Ingredients</h4>
+            
+            <p class="text-black mb-4">Method:</p>
+            <p class="text-black">{{ recipe.method }}</p>
+
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+
