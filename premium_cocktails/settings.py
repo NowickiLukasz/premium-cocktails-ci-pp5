@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-@9o-zofwuyvo$ki6bm7dsz^afenutz2f66&hm*@j(tbg9)@&xk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['premium-cocktails.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -125,16 +125,20 @@ WSGI_APPLICATION = 'premium_cocktails.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://vcfleyxzrexdhh:45f32d77d411c2146226c7645d52141c85d9560f1b39897eb2c3992f54a993b8@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/d7v9nbgr69s6ui')
-# }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('DATABASE_URL')
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+
 
 
 # Password validation

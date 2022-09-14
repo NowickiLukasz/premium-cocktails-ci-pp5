@@ -1,0 +1,1 @@
+web: gunicorn premium_cocktails.wsgi:application
