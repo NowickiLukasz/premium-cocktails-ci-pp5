@@ -15,18 +15,28 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-12 col-md-6 col-sm-12">
-            {% if product.image %}
-                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            {% if recipe.image %}
+                <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.name }}">
             {% else %}
-                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ recipe.name }}">
             {% endif %}
         </div>
-        <div class="col-12 col-md-6 col-sm-12">
-            <h3 class="text-black mb-4">Name: <span class="float-right">{{recipe.name}}</span></h3>
-            <h4 class="text-black mb-4">Ingredients</h4>
-            
-            <p class="text-black mb-4">Method:</p>
+        <div class="col-12 col-md-6 col-sm-12 text-center">
+            <h1 class="text-black mb-4 font-weight-bold">{{recipe.name}}</h1>
+            <h4 class="text-black mb-4 font-weight-bold">Ingredients</h4>
+            <hr class="w-50">
+            <!-- Iterates throught indredients of the drink -->
+            {% for ingredient in recipe_ingredients %}
+            <p><strong>{{ ingredient.name }}</strong> {{ ingredient.quantity }} {{ ingredient.unit}}</p>
+            {% endfor %}
+            <hr class="w-50">
+
+            <!-- displays how instructions on how to make the drink -->
+            <h4 class="text-black mb-4 font-weight-bold">Method:</h4>
+            <hr class="w-50">
             <p class="text-black">{{ recipe.method }}</p>
+
+            
 
         </div>
     </div>
