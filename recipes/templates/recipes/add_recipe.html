@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-black text-center">Product management</h3>
+                <h5 class="text-center">Add Recipe</h5>
+                <hr class="w-50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form method="POST" action="" class="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <!-- {{ ingredient_form | crispy }} -->
+                    <div class="text-right mb-5">
+                        <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black" type="submit">Add Product</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+        
+       </div>
+    </div>
+
+
+{% endblock %}

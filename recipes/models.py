@@ -19,4 +19,7 @@ class RecipeIngredient(models.Model):
     name = models.CharField(max_length=50, blank=False, null=False)
     quantity = models.CharField(max_length=50)
     unit = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
     
