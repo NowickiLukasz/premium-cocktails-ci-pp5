@@ -28,7 +28,7 @@
                 <div class="col mb-4">
                     <a href="{% url 'recipe_details' recipe.id %}">
                         <div class="card">
-                            {% if product.image %}
+                            {% if recipe.image %}
                                 <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.name }}">
                             {% else %}
                                 <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ recipe.name }}">

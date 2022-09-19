@@ -26,23 +26,11 @@
                     {{ ingredient_form | crispy }}
                     <div class="text-right">
                         <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black" type="submit">Add Product</button>
+                        <button class="btn btn-black" type="submit">Add Ingredient</button>
                     </div>
                     
 
                 </form>
-
-                <!-- <form method="POST" action="" class="form" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ recipe_form | crispy }}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black" type="submit">Add Product</button>
-                    </div>
-                    
-
-                </form> -->
-                
             </div>
 
         
