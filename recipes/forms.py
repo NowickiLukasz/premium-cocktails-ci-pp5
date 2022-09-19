@@ -14,6 +14,8 @@ class RecipeIngredientForm(forms.ModelForm):
 
     class Meta:
         model = RecipeIngredient
-        exclude = ('recipe',)
+        # readonly_fields = ('recipe')
+        # exclude = ('recipe',)
+        fields = '__all__'
 
 

@@ -1,7 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 
-from profiles.models import UserProfile 
-
 
 from .models import Recipe, RecipeIngredient
 from .forms import RecipeForm, RecipeIngredientForm
@@ -61,7 +59,15 @@ def add_recipe(request):
 def add_recipe_ingredient(request):
     """Allows user to add ingredients to recipe"""
 
-    ingredient_form = RecipeIngredientForm()
+    if request.method == 'POST':
+        ingredient_form = RecipeIngredientForm(request.POST, request.FILES)
+        if ingredient_form.is_valid():
+            new_form = ingredient_form.save(commit=False)
+            new_form.user = request.user
+            new_form.save()
+            return redirect(reverse('home'))
+    else:
+        ingredient_form = RecipeIngredientForm()
 
     template = 'recipes/add_recipe_ingredient.html'
 
