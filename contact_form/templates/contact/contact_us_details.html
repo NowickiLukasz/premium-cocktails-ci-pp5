@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'contact_us/css/contact_us.css' %}">
-{% endblock %}
-
 
 {% block page_header %}
     <div class="container header-container">
@@ -19,12 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <form class="w-50" method="POST" action="{% url 'contact_us' %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{contact_form|crispy}}
-    
-                    <button class="btn btn-black" type="submit">Submit</button>
-                </form>
+                
             </div>
         </div>
     </div>
