@@ -24,7 +24,8 @@ def recipe_details(request, recipe_id):
     """Allows to view a specific recipe"""
 
     recipe = get_object_or_404(Recipe, id=recipe_id)
-    recipe_ingredients = RecipeIngredient.objects.all()
+    # recipe_ingredients = RecipeIngredient.objects.all()
+    recipe_ingredients = get_object_or_404(RecipeIngredient)
 
     context = {
         'recipe': recipe,
@@ -89,7 +90,7 @@ def edit_recipe(request, recipe_id):
         if edit_form.is_valid():
             edit_form.save()
             messages.success(request, 'Recipe updated!')
-            return redirect(reverse('recipe_details', args=[recipe.id]))
+            return redirect(reverse('edit_recipe_ingredients', args=[recipe.id]))
         else:
             messages.error(request, 'Failed to update recipe, make sure the form is valid')
     else:

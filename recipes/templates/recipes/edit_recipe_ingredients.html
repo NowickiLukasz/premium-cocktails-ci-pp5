@@ -15,13 +15,13 @@
         <div class="row">
             <div class="col-12">
                 <h3 class="text-black text-center">Product management</h3>
-                <h5 class="text-center">Edit Recipe</h5>
+                <h5 class="text-center">Edit Ingredients</h5>
                 <hr class="w-50">
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <form method="POST" action="{% url 'edit_recipe' recipe.id %}" class="form" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_recipe_ingredients' recipe.id %}" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ edit_form|crispy }}
                     <div class="text-right mb-5">

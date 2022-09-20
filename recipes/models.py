@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Recipe(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipes')
     name = models.CharField(max_length=254, blank=False, null=False)
     method = models.TextField()
     image = models.ImageField(null=True, blank=True)
