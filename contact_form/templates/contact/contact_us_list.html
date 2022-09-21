@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col">
                 {% for submition in submitions %}
-                <a href="#">
+                <a href="{% url 'contact_details' submition.id %}">
                     <div class="card mr-5 ml-5">
                         <div class="card-body">
                         <h5 class="card-title text-black text-center">{{ submition.name }}</h5>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 from .models import ContactUs
@@ -29,6 +29,7 @@ def contact_us(request):
 
 
 def contact_us_list(request):
+    """Allows the site owner to view users submisions"""
     submitions = ContactUs.objects.all()
 
     template = 'contact/contact_us_list.html'
@@ -41,5 +42,16 @@ def contact_us_list(request):
 
 
 def contact_us_details(request, contact_id):
-    """Allows the site owner to view users submisions"""
+    """Allows the site owner to view users submisions details"""
 
+    contact_details = get_object_or_404(ContactUs, pk=contact_id)
+
+    template = 'contact/contact_us_details.html'
+
+    context = {
+        'contact_details': contact_details,
+    }
+
+    return render(request, template, context)
+
+    
