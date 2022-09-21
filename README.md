@@ -28,7 +28,7 @@ This is the [live link]() for the site - need to isert link
     - I want to be able to be able to view product detail so I can find information about priceand description.
     - I want to be able to complete the checkout process and be able to enter payment information easily.
     - I want to be able to view a confirmation of my order once the checkout process is complete.
-    - I want to be able to received an email confirmation of my order.
+    - I want to be able to received an email confirmation of my order. -- mebe
     - I want to be able to read reviews from previous users of the product.
     - I want to be able to register easily for an account.
     - I want to be able to add products to my shopping basket.
@@ -36,7 +36,7 @@ This is the [live link]() for the site - need to isert link
     - I want to be able to edit my shopping basket.
     - I want to be able to remove items from my shopping basket.
     - I want to be able to view the total amount of my basket.
-    - I want to be able to see instructions appear to notify me if I have succeeded in my intention of purchasing a product etc.
+    - I want to be able to see instructions appear to notify me if I have succeeded in purchasing a product etc.
     - I want to be able to send a message to the company if I have any queries
     - I want to be able to sign up to a news letter from the company to be able to receive updates on products.
     
