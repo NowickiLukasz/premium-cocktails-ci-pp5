@@ -59,15 +59,16 @@
         <div class="col-4 mt-3 text-center"><a class="text-black" href="">Twitter</a></div>
     </div>
 </div>
-<br>
-<br>
-<br>
-<div class="container-fluid contact-us-link">
+
+<div class="container-fluid footer">
     <div class="row w-100">
-        <div class="col-12 mt-3 text-center"><a class="text-black" href="">Contact Us!</a></div>
+        <div class="col-4 mt-3 text-center">info</div>
+        <div class="col-4 mt-3 text-center"><a class="text-black" href="{% url 'contact_us' %}">Contact Us!</a></div>
+        <div class="col-4 mt-3 text-center">newsletter</div>
+
     </div>
 </div>
-<a href="{% url 'contact_us' %}">Contact us</a>
+
 
 
 {% endblock %}

@@ -59,24 +59,6 @@ def add_recipe(request):
     return render(request, template, context)
 
 
-def add_recipe_ingredient(request, recipe_id, **kwargs):
-    """Allows user to add ingredients to recipe"""
-    if request.method == 'POST':
-        ingredient_form = RecipeIngredientForm(request.POST, request.FILES)
-        if ingredient_form.is_valid():
-            new_form = ingredient_form.save(commit=False)
-            new_form.user = request.user
-            new_form.save()
-            messages.success(request, 'Successfully added ingredients!')
-            return redirect(reverse('home'))
-    else:
-        ingredient_form = RecipeIngredientForm()
-    template = 'recipes/add_recipe_ingredient.html'
-
-    context = {
-        'ingredient_form': ingredient_form,
-    }
-    return render(request, template, context)
 
 
 def edit_recipe(request, recipe_id):
@@ -103,22 +85,6 @@ def edit_recipe(request, recipe_id):
         'recipe': recipe,
     }
     return render(request, template, context)
-
-
-def edit_recipe_ingredients(request, recipe_id):
-    """Allows the super user to edit ingredients of a recipe"""
-    recipe_ingredients = get_object_or_404(RecipeIngredient, pk=recipe_id)
-
-    if request.method == 'POST':
-        edit_ingredient_form = RecipeIngredientForm(request.POST, request.FILES, instance=recipe_ingredients)
-        if edit_ingredient_form.is_valid():
-            edit_ingredient_form.save()
-            messages.success(request, 'Recipe updated!')
-            return redirect(reverse('recipe_details', args=[recipe_ingredients.id]))
-        else:
-            messages.error(request, 'Failed to update recipe, make sure the form is valid')
-    else:
-        edit_ingredient_form = RecipeIngredientForm(instance=recipe_ingredients)
 
 
 def delete_recipe(request, recipe_id):

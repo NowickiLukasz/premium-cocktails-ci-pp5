@@ -88,6 +88,11 @@ body {
     height: 50px;
 }
 
+.footer{
+    
+    height:150px;
+}
+
 /* link cursors */
 
 .remove-link,
