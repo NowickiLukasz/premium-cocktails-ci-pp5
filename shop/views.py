@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse
-from django.db.models import Q
-from django.contrib import messages
-from products.models import Product
+
+from .forms import NewsletterForm
 
 
 def shop_page(request):
@@ -13,17 +12,22 @@ def shop_page(request):
     return render(request, 'shop/shop.html')
 
 
-# def category(request):
+def newsletter_application(request):
+    """Send a newsletter requast to site owner"""
 
-#     products = Product.objects.all()
-#     category = None
+    if request.method == 'POST':
+        newsletter = NewsletterForm(request.POST)
+        if newsletter.is_valid():
+            newsletter.save()
+            # messages.success(request, 'Message has been sent! Thank you.')
+            return redirect(reverse('home'))
+    
+    else:
+        newsletter = NewsletterForm()
 
-#     if request.GET:
-#         if 'category' in request.GET:
-#             categories = request.GET['category']
-#             products = products.filter(category__title=categories)
+    template = 'shop/newsletter.html'
+    context = {
+        'newsletter': newsletter,
+    }
 
-#     context = {
-#         'products': products,
-#     }
-#     return render(request, 'products/products.html', context)
+    return render(request, template, context)

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -62,9 +63,16 @@
 
 <div class="container-fluid footer">
     <div class="row w-100">
-        <div class="col-4 mt-3 text-center">info</div>
-        <div class="col-4 mt-3 text-center"><a class="text-black" href="{% url 'contact_us' %}">Contact Us!</a></div>
-        <div class="col-4 mt-3 text-center">newsletter</div>
+        <div class="col-4 mt-3">
+            This page is for educational purposes and will. 
+        </div>
+        <div class="col-4 mt-3 text-center">
+            <a class="text-white" href="{% url 'contact_us' %}">Click here to Contact Us!</a>
+            <p class="mt-3">Tell us what you think and what we can Imporve!</p>
+        </div>
+        <div class="col-4 mt-3 text-center">
+            <a class="text-white" href="{% url 'newsletter' %}">Sign up for newsletter here</a>
+        </div>
 
     </div>
 </div>

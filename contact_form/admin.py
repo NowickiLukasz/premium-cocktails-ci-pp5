@@ -7,5 +7,7 @@ from .models import ContactUs
 class ContactUsAdmin(admin.ModelAdmin):
     """Admin Class for ContactUs Model"""
     list_display = (
-        'name', 'content', 'email',
+        'name', 'content', 'email', 'created_on',
     )
+
+

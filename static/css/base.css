@@ -89,7 +89,8 @@ body {
 }
 
 .footer{
-    
+    background-color: rgb(82, 50, 212);
+    color:white;
     height:150px;
 }
 
