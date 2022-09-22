@@ -15,9 +15,9 @@ class Recipe(models.Model):
 
 
 class RecipeIngredient(models.Model):
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='ingredients')
     name = models.CharField(max_length=50, blank=False, null=False)
-    quantity = models.CharField(max_length=50)
+    quantity = models.IntegerField()
     unit = models.CharField(max_length=50)
 
     def __str__(self):

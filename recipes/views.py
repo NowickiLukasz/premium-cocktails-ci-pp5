@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 
 from .models import Recipe, RecipeIngredient
-from .forms import RecipeForm, RecipeIngredientForm
+from .forms import RecipeForm, RecipeIngredientForm, IngredientFormSet
 
 
 def all_recipes(request):
@@ -20,13 +20,80 @@ def all_recipes(request):
     return render(request, template, context)
 
 
+def add_recipe(request):
+    """Allows superuser to add a recipe to the site"""
+    
+    if request.method == 'POST':
+        form = RecipeForm(request.POST, request.FILES)
+        if form.is_valid():
+            recipe = form.save(commit=False)
+            recipe.user = request.user
+            recipe.save()
+            formset = IngredientFormSet(request.POST, instance=recipe)
+            
+            if formset.is_valid():
+                formset.save()
+                messages.success(request, 'Successfully added recipe name and method!')
+                return redirect(reverse('home'))
+    else:
+        form = RecipeForm()
+        formset = IngredientFormSet()
+    
+    template = 'recipes/add_recipe.html'
+
+    context = {
+        'form': form,
+        'formset': formset,
+    }
+    return render(request, template, context)
+
+
+# def add_recipe(request):
+#     """Allows superuser to add a recipe to the site"""
+#     if request.method == 'POST':
+#         form = RecipeForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             recipe = form.save(commit=False)
+#             recipe.user = request.user
+#             recipe.save()
+           
+#             messages.success(request, 'Successfully added recipe name and method!')
+#             return redirect(reverse(''))
+#     else:
+#         form = RecipeForm()
+
+#     template = 'recipes/add_recipe.html'
+
+#     context = {
+#         'form': form,
+#     }
+#     return render(request, template, context)
+
+
+# def add_recipe_ingredient(request, pk):
+#     """Allows admin to add recipe ingredinets"""
+#     recipe = Recipe.objects.get(pk=pk)
+#     formset = IngredientFormSet(request.POST)
+
+#     if request.method == 'POST':
+#         if formset.is_valid():
+#             formset.instance = recipe
+#             formset.save()
+#             return redirect('recipe_ingredients', pk=recipe.id)
+
+#     context = {
+#         'formset': formset,
+#     }
+
+#     template = 'recipes/recipe_ingredients.html'
+#     return render(request, template, context)
+
+
 def recipe_details(request, recipe_id):
     """Allows to view a specific recipe"""
 
     recipe = get_object_or_404(Recipe, id=recipe_id)
-    # recipe_ingredients = RecipeIngredient.objects.all()
-    recipe_ingredients = get_object_or_404(RecipeIngredient)
-
+    recipe_ingredients = RecipeIngredient.objects.filter(recipe=recipe)
     context = {
         'recipe': recipe,
         'recipe_ingredients': recipe_ingredients,
@@ -36,53 +103,36 @@ def recipe_details(request, recipe_id):
     return render(request, template, context)
 
 
-def add_recipe(request):
-    """Allows superuser to add a recipe to the site"""
-
-    if request.method == 'POST':
-        form = RecipeForm(request.POST, request.FILES)
-        if form.is_valid():
-            new_form = form.save(commit=False)
-            new_form.user = request.user
-            new_form.save()
-            recipe_id = new_form.id
-            messages.success(request, 'Successfully added recipe name and method!')
-            return redirect(reverse('add_recipe_ingredient', args=[recipe_id]))
-    else:
-        form = RecipeForm()
-    
-    template = 'recipes/add_recipe.html'
-
-    context = {
-        'form': form,
-    }
-    return render(request, template, context)
-
-
-
-
 def edit_recipe(request, recipe_id):
 
     """Allows the super user to edit recipe on page"""
 
-    recipe = get_object_or_404(Recipe, pk=recipe_id)
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+    ingredients = RecipeIngredient.objects.filter(recipe=recipe)
 
     if request.method == 'POST':
         edit_form = RecipeForm(request.POST, request.FILES, instance=recipe)
         if edit_form.is_valid():
             edit_form.save()
-            messages.success(request, 'Recipe updated!')
-            return redirect(reverse('edit_recipe_ingredients', args=[recipe.id]))
+            formset = IngredientFormSet(request.POST, instance=ingredients)
+            
+            if formset.is_valid():
+                formset.save()
+                messages.success(request, 'Successfully added recipe name and method!')
+                return redirect(reverse('home'))
+           
         else:
             messages.error(request, 'Failed to update recipe, make sure the form is valid')
     else:
         edit_form = RecipeForm(instance=recipe)
+        formset = IngredientFormSet(instance=recipe)
 
     template = 'recipes/edit_recipe.html'
 
     context = {
         'edit_form': edit_form,
         'recipe': recipe,
+        'formset': formset,
     }
     return render(request, template, context)
 

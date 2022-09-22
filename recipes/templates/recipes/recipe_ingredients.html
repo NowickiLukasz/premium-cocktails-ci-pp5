@@ -24,11 +24,7 @@
                 <form method="POST" action="" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <hr>
-                    {{ formset.management_form }}
-                    {% for form in formset %}
-                    {{ form|crispy }}
-                    {% endfor %}
+
                     <div class="text-right mb-5">
                         <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black" type="submit">Next</button>
