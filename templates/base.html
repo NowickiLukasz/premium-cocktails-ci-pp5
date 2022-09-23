@@ -75,6 +75,8 @@
                                     <div><i class="fas fa-user"></i></div>
                                     {% if user.is_authenticated %}
                                         <p>{{user.username}}</p>
+                                    {% else %}
+                                        <p>Account</p>
                                     {% endif %}
                                     
                                 </div>

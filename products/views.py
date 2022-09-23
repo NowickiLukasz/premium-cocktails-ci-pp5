@@ -4,9 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .forms import ProductForm
+from .forms import ProductForm, ProductReviewForm
 
-from .models import Product
+from .models import Product, ProductReview
 
 
 def all_products(request):
@@ -91,9 +91,12 @@ def product_details_page(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
-    
+
+    review_form = ProductReviewForm()
+
     context = {
         'product': product,
+        'review_form': review_form,
     }
 
     return render(request, 'products/book_details_page.html', context)

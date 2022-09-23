@@ -19,7 +19,7 @@ def newsletter_application(request):
         newsletter = NewsletterForm(request.POST)
         if newsletter.is_valid():
             newsletter.save()
-            # messages.success(request, 'Message has been sent! Thank you.')
+            messages.success(request, 'You have signed up to our newsletter.')
             return redirect(reverse('home'))
     
     else:
