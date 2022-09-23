@@ -112,7 +112,13 @@
                 <hr>
                 <p>{{ review.user_review }}</p>
             </div>
-            
+            {% if request.user.is_superuser %}
+                <div class="col-2 pt-2">
+                    <div>
+                        <a href="{% url 'delete_review' review.id %}"><p class="text-danger text-center">Delete</p></a>
+                    </div>
+                </div>
+            {% endif %}
         </div>
        
     {% endfor %}

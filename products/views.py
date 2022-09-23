@@ -195,3 +195,18 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product has been deleted')
     return redirect(reverse('products'))
+
+
+def delete_review(request, review_id):
+    '''
+    Deletes the review from the product
+    '''
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can delete reviews!')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(ProductReview, pk=review_id)
+    review.delete()
+    messages.success(request, 'Review has been deleted!')
+
+    return redirect(reverse('home'))
