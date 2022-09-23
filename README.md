@@ -8,7 +8,10 @@ This is the [live link]() for the site - need to isert link
 - [User Experirence(UX)](#user-experience-ux)
     - [User Stories](#user-stories)
     - Site Owner
-- Site Scope 
+- Site Structure
+- Database Models
+- WireFrames
+- Site features
 - Techonologies Used
 - Deployment
 - Credits
@@ -66,6 +69,115 @@ This is the [live link]() for the site - need to isert link
     - I want to be able to edit or delete products.
     - I want to be able to edit or delete recipes.
     - I want to be able to access the Django admin portal easily
+
+
+
+# Site Structure
+This project has been designed with multiple applications for the ease of manipulation of data and a logical approach to building the site with the Django framework. 
+
+- Home
+    - This app contains the information needed to allow the user to easliy browse through the site. 
+
+- Products
+    - This app contains all of the products that are sold on the site. The user may view each product, add a product to the basket and search for items ont the pages. 
+    Each item on the page may be selected and the details of the item will be displayed, alongside any reviews that may have been left by previous buyers or previous consumers.
+- Recipes 
+    - This app allows the users to view a listing of recipes of popular mixed drinks. Once a recipe has been selected, it will display the recipe method and the ingredients needed to create the drink.
+
+- Checkout
+    - This app allows the user to purchase items they have selected. They may adjust the items quantity or remove entitrely if required. 
+
+- Basket 
+    - This app allows the user to view the selected items though their shopping experience.
+
+- Profiles
+    - This app allows the user to save their details so that the checkout app may prepoulate a shipping details form so that they may purchase products quicker. 
+
+- Shop
+    - This app allows the user to select a page they with to head to. They may choose to eaither go to pages they may purchase goods from or to view repices
+
+- Contact form
+    - This app allows the users to send a message to the site owner to let them know how they view their goods and what can be imporved with new products.
+
+
+# Database Models
+
+Add img of database
+
+# Wireframes
+
+# Site Features
+
+## Navigation
+img of header nav bar
+
+The navigation section of the pages contains a logo, a search bar, link to view profile for regular user and additional fields for site admin and a basket button. 
+
+The footer allows the user the contact the site owner or to signup to a site newsletter.
+
+img of account button for user and admin
+
+img of footer
+
+## Products Pages
+
+The initial page a user will view will be to allows them to select a category of product to view or recipes. 
+
+Img of shop page. 
+
+The user may select one of these and browse through items on the page. 
+
+Items that may be purchased have a a sort function. 
+
+img of sort function 
+
+Site admin may edit or delete unwanted items on the site. 
+
+img of edit-delete in products page
+
+## product details 
+
+img of product details
+
+On this page a user may select a quantity of items they wish to purchase and add the items to the basket 
+
+img of select quantity and add basket 
+
+
+## Register/ Log-in / Log-out
+
+Here the a user may register for the site or if tghe user has an account they may login or out of the the site. 
+
+Images of site log in or out
+
+## Profile
+
+Here the current logged in user may view their details and view their previous purchase history 
+
+img profile page
+
+## Basket Page
+
+A user of the site that has added items to the basket may adjust the items they have selected. 
+
+They may remove all items if necessary
+
+The user may then proceed to the checkout page to finalise their purchase. 
+
+images of adjust items and checkout button 
+
+## Checkout
+
+A user may enter their delivery details on the form provided or if they have an account registered, the details will be filled out.
+
+The user must fill out a card detail form which, once filled out will permit the user to purchase the items selcted
+
+## Contact Us
+
+The user will be able to fill out a form with their details and a message to the site owner. 
+
+img contact us
+
 
 
 ### bugs through work 
