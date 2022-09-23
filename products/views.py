@@ -92,10 +92,34 @@ def product_details_page(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    if request.method == 'POST':
+
+        review_form = ProductReviewForm(data=request.POST)
+
+        if request.user.is_authenticated and review_form.is_valid():
+
+            review_form.instance.user = request.user
+            product_review = review_form.save(commit=False)
+            product_review.product = product
+            product_review.save()
+            messages.success(request, ('Thank you for your review!'))
+
+            return redirect(reverse('product_details_page', args=[product.id]))
+        else:
+            messages.error(
+                request,
+                'Please login to create a review.')
+            return redirect(reverse('cocktail_detail', args={product.id}))
+    else:
+        review_form = ProductReviewForm()
+
+    product_reviews = ProductReview.objects.filter(product=product)
+
     review_form = ProductReviewForm()
 
     context = {
         'product': product,
+        'product_reviews': product_reviews,
         'review_form': review_form,
     }
 

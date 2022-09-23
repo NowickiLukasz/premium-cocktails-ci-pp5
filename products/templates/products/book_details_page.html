@@ -91,34 +91,37 @@
     
     <div class="container-fluid">
         <h2>Add a Review</h2>
-            {{review_form|crispy}}
-        {% if cocktail_reviews %}
-                {% for review in cocktail_reviews %}
-                    <div class="row border bg-light mt-2">
-                        <div class="col-2 mt-3 mb-2 text-center">
-                            <img class="user-width" src="{% static 'images/user.PNG' %}" alt="User Review Icon Image">
-                            <p>{{ review.user }}</p>
-                        </div>
-                        <div class="col-8 mt-2 mb-2 small-shift">
-                            <h5 class="small-title-review">{{ review.title }}</h5>
-                            <hr>
-                            <p class="small-review">{{ review.user_review }}</p>
-                        </div>
-                        {% if request.user.is_superuser %}
-                        <div class="col-2 btns pt-2">
-                            <div class="red-background">
-                                <a href="{% url 'delete_cocktail_review' review.id %}"><p class="text-blue text-center"><i class="fa-solid fa-xmark"></i></p></a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                <p class="text-center pb-2 pt-2">
-                    <i class="fa-solid fa-face-sad-cry text-blue delivery-text mt-3 mb-3"></i> Looks like this product doesn't have any reviews yet! 
-                </p>
-            {% endif %}
+        <form method="POST" action="{% url 'product_details_page' product.id %}" class="mt-2">
+            {% csrf_token %}
+            {{ review_form|crispy }}
+            <button class="btn btn-black text-center mb-4" type="submit" aria-label="Post Review">
+                Post Review
+            </button>
+        </form>
+     
     </div>
+
+    {% if product_reviews %}
+    {% for review in product_reviews %}
+        <div class="row border bg-light mt-2">
+            <div class="col-2 mt-3 mb-2 text-center">
+                <p>{{ review.user }}</p>
+            </div>
+            <div class="col-8 mt-2 mb-2">
+                <h5>{{ review.title }}</h5>
+                <hr>
+                <p>{{ review.user_review }}</p>
+            </div>
+            
+        </div>
+       
+    {% endfor %}
+{% else %}
+    <p class="text-center pb-2 pt-2">
+         Looks like this product doesn't have any reviews yet! 
+    </p>
+{% endif %}
+
         
 
 {% endblock %}
