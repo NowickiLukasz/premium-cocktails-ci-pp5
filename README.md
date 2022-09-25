@@ -101,61 +101,129 @@ This project has been designed with multiple applications for the ease of manipu
 
 
 # Database Models
-
-Add img of database
+This is a database schema on the connection of the database models. 
+<img src="readme-images/database/database-model.png">
 
 # Wireframes
+
+### Home Page
+<details>
+<img src="/workspace/premium-cocktails-ci-pp5/readme-images/wireframes/home.png">
+</details>
+<br>
+
+
+### Shop Page
+<details>
+<img src="/workspace/premium-cocktails-ci-pp5/readme-images/wireframes/shop.png">
+</details>
+<br>
+
+
+### Cocktail List Page
+
+<details>
+<img src="readme-images/wireframes/cocktail-list-page.png">
+</details>
+<br>
+
+### Book List Page
+
+<details>
+<img src="/workspace/premium-cocktails-ci-pp5/readme-images/wireframes/book-list.png">
+</details>
+<br>
+
+### Cocktail Details Page
+
+<details>
+<img src="readme-images/wireframes/cocktail-details-page.png">
+</details>
+<br>
+
+### Book Details Page
+
+<details>
+<img src="readme-images/wireframes/book-details.png">
+</details>
+<br>
+
+### Basket
+
+<details>
+<img src="readme-images/wireframes/basket.png">
+</details>
+<br>
+
+### Checkout
+
+<details>
+<img src="readme-images/wireframes/checkout.png">
+</details>
+<br>
+
+### Profile
+
+<details>
+<img src="readme-images/wireframes/profile.png">
+</details>
+<br>
+
+
+
 
 # Site Features
 
 ## Navigation
-img of header nav bar
+<img src="readme-images/features/nav-bar.png">
 
 The navigation section of the pages contains a logo, a search bar, link to view profile for regular user and additional fields for site admin and a basket button. 
 
 The footer allows the user the contact the site owner or to signup to a site newsletter.
 
 img of account button for user and admin
+<img src="readme-images/features/account-button.png">
 
 img of footer
+<img src="readme-images/features/footer.png">
 
 ## Products Pages
 
 The initial page a user will view will be to allows them to select a category of product to view or recipes. 
 
 Img of shop page. 
-
+<img src="readme-images/features/shop-page.png">
 The user may select one of these and browse through items on the page. 
 
 Items that may be purchased have a a sort function. 
 
 img of sort function 
-
+<img src="readme-images/features/sort-function.png">
 Site admin may edit or delete unwanted items on the site. 
 
 img of edit-delete in products page
-
+<img src="readme-images/features/edit-delete.png">
 ## product details 
 
 img of product details
-
+<img src="readme-images/features/product-details.png">
 On this page a user may select a quantity of items they wish to purchase and add the items to the basket 
 
 img of select quantity and add basket 
-
+<img src="readme-images/features/quantity-selector.png">
 
 ## Register/ Log-in / Log-out
 
 Here the a user may register for the site or if tghe user has an account they may login or out of the the site. 
 
 Images of site log in or out
-
+<img src="readme-images/features/log-in.png">
 ## Profile
 
 Here the current logged in user may view their details and view their previous purchase history 
 
 img profile page
-
+<img src="readme-images/features/profile-page.png">
 ## Basket Page
 
 A user of the site that has added items to the basket may adjust the items they have selected. 
@@ -165,6 +233,7 @@ They may remove all items if necessary
 The user may then proceed to the checkout page to finalise their purchase. 
 
 images of adjust items and checkout button 
+<img src="readme-images/features/shopping-basket.png">
 
 ## Checkout
 
@@ -172,12 +241,21 @@ A user may enter their delivery details on the form provided or if they have an 
 
 The user must fill out a card detail form which, once filled out will permit the user to purchase the items selcted
 
+img checkout
+<img src="readme-images/features/checkout.png">
+
+## Confirmation 
+
+A user will be taken to the confirmation page once the purchase has been made. 
+
+img confirmation
+<img src="readme-images/features/confirmation.png">
 ## Contact Us
 
 The user will be able to fill out a form with their details and a message to the site owner. 
 
 img contact us
-
+<img src="readme-images/features/contact-us.png">
 
 
 ### bugs through work 

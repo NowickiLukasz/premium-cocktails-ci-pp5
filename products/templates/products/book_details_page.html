@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    
+    {% if request.user.is_authenticated %}
     <div class="container-fluid">
         <h2>Add a Review</h2>
         <form method="POST" action="{% url 'product_details_page' product.id %}" class="mt-2">
@@ -98,8 +98,10 @@
                 Post Review
             </button>
         </form>
-     
     </div>
+    {% else %}
+        <h2 class="text-center">Please Log in to leave a review</h2>
+    {% endif %}
 
     {% if product_reviews %}
     {% for review in product_reviews %}
