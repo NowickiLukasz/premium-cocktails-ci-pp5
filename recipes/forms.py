@@ -12,16 +12,34 @@ class RecipeForm(forms.ModelForm):
 
 class RecipeIngredientForm(forms.ModelForm):
 
+    name = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Enter ingredient here'
+        })
+    )
+    quantity = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Enter quantity here'
+        })
+    )
+    unit = forms.CharField(
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Enter measurement unit here'
+        })
+    )
+
     class Meta:
         model = RecipeIngredient
         exclude = ('recipe',)
 
 
-IngredientFormSet = inlineformset_factory(
-    Recipe,
+IngredientFormSet = forms.modelformset_factory(
     RecipeIngredient,
     form=RecipeIngredientForm,
     can_delete=False,
-    min_num=1,
-    extra=0,
+    # can_delete=True,
+    fields=('name', 'quantity', 'unit',),
+    # min_num=1,
+    max_num=3,
+    # extra=2,
     )

@@ -25,9 +25,10 @@
                     {% csrf_token %}
                     {{ edit_form|crispy }}
                     <hr>
-                    {{ formset.management_form }}
-                    {% for form in formset %}
-                    {{ form|crispy }}
+                    {{ ingredient_formset.management_form }}
+                    {% for form in ingredient_formset %}
+                        {{ form|crispy }}
+                        <hr class="bg-danger">
                     {% endfor %}
                     <div class="text-right mb-5">
                         <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>

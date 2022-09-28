@@ -56,8 +56,13 @@ INSTALLED_APPS = [
     # Other apps
     'crispy_forms',
     'storages',
+    'django_extensions',
 ]
 
+GRAPH_MODELS ={
+'all_applications': True,
+'graph_models': True,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
