@@ -59,10 +59,10 @@ INSTALLED_APPS = [
     'django_extensions',
 ]
 
-GRAPH_MODELS ={
-'all_applications': True,
-'graph_models': True,
-}
+# GRAPH_MODELS ={
+# 'all_applications': True,
+# 'graph_models': True,
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -221,7 +221,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Stripe 
-STRIPE_CURRENCY = 'usd'
+STRIPE_CURRENCY = 'eu'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')

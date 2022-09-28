@@ -108,14 +108,14 @@ This is a database schema on the connection of the database models.
 
 ### Home Page
 <details>
-<img src="/workspace/premium-cocktails-ci-pp5/readme-images/wireframes/home.png">
+<img src="readme-images/wireframes/home.png">
 </details>
 <br>
 
 
 ### Shop Page
 <details>
-<img src="/workspace/premium-cocktails-ci-pp5/readme-images/wireframes/shop.png">
+<img src="readme-images/wireframes/shop.png">
 </details>
 <br>
 
@@ -130,7 +130,7 @@ This is a database schema on the connection of the database models.
 ### Book List Page
 
 <details>
-<img src="/workspace/premium-cocktails-ci-pp5/readme-images/wireframes/book-list.png">
+<img src="readme-images/wireframes/book-list.png">
 </details>
 <br>
 
