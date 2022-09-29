@@ -34,7 +34,8 @@ body {
 }
 
 .header-page-text {
-    position: relative;
+    /* position: relative; */
+    padding-top: 15px;;
 }
 
 /* Buttons */

@@ -1,0 +1,14 @@
+<div class="row bg-white pt-lg-2 d-none d-lg-flex p-0">
+    <div class="text-center all-products ">
+        <a data-toggle="dropdown">
+            All products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="all-products-link">
+            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By price(low to high)</a>
+            <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By price(high to low)</a>
+            <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">By name(A-Z)</a>
+            <a href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item">By price(Z-A)</a>
+        </div>
+
+    </div>
+</div>
