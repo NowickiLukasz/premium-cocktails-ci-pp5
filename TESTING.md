@@ -197,18 +197,47 @@ The results for testing are shown below.
 - The user may access the full basket details by clicking the secure checkout button in the pop up basket message &check;
 - The user may adjust the quantity of items on the basket page &check;
 - The user may remove the items entirely from the basket &check;
-- The user may proceede to the payment page from the pasket page &check;
 - The user may go back to the shop page if they wish to buy more items 
 - The subtotal will be shown near the secure check out button &check;
 - The amount due for payment will change accodingly to items in the basket. &check;
+- The user may procede to the payment page from the basket page &check;
 
 #### Checkout Page
+- When a user views this page, they can view the the items they are about to purchase &check;
+- When a user is not registered. The user will need to fill out the shipping details. &check;
+- When a user is registered, their shipping details fill be autofilled in &check;
+- The user will be able to view the total the items will cost &check;
+- The user will be able to fill out a card details section &check;
+- The card details input will validate if the card number is not correct &check;
+- If a user has no profile details saved yet, the user may choose to save the shipping details as their profile details &check;
+- The user may complete a purchase
+- The user will be prompted with a loading screen when payment is processing &check;
+- Once the payment is processed, the user will be shown a confirmation page &check;
+- The user will be sent an email with their confirmation details. &check;
 
 #### Profile Page
+- A new user with an account may fill out their profile details. &check;
+- A User with an account may update their profile details &check;
+- A user with an account may view their previous purchases. &check;
+- A user may select a previous purchase and view the details of a previous purchase. &check;
 
 #### Shop Management
+- The admin is taken to the correct page when a link is clicked on the drop down selection menu. &check;
+- The admin can add a new product to sell &check;
+- The admin can add a new recipe for the users to view &check;
+- The form on the add recipe page valides correctly when all fields are filled out &check;
+- The add image field works as correctly and adds a recipe image &check;
+- The delete recipe button works correctly and removes a recipe &check;
+- The edit button works correctly and allows the user to update the recipe &check;
+- The create recipe button work correctly and allows the user to add a recipe &check;
+- The add image field works as correctly and adds a product image &check;
+- The delete recipe button works correctly and removes a product &check;
+- The edit button works correctly and allows the user to update the product &check;
+- The create recipe button work correctly and allows the user to add a product &check;
+
 
 ### Contact Us
+
 
 ### Newsletter
 

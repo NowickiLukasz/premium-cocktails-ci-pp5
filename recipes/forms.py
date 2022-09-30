@@ -37,9 +37,8 @@ IngredientFormSet = forms.modelformset_factory(
     RecipeIngredient,
     form=RecipeIngredientForm,
     can_delete=False,
-    # can_delete=True,
     fields=('name', 'quantity', 'unit',),
-    # min_num=1,
+    min_num=3,
     max_num=3,
     # extra=2,
     )
