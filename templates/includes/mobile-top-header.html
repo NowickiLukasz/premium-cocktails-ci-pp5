@@ -1,6 +1,6 @@
 
-<div>
-    <ul>
+
+<ul class="d-lg-none">
     <li class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none" href="{% url 'home' %}" id="home" aria-expanded="false">
             <div class="text-center">
@@ -34,13 +34,13 @@
         </div>
     </li>
     <li class="list-inline-item dropdown">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0">My Account</p>
             </div>
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        <div class="dropdown-menu border-0" aria-labelledby="mobile-user-options">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Shop Management</a>
@@ -55,7 +55,7 @@
             {% endif %}
         </div>
     </li>
-    <!-- Shopping basket -->
+    
     <li class="list-inline-item">
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
             <div class="text-center">
@@ -70,5 +70,4 @@
             </div>
         </a>
     </li>
-    </ul>
-</div>
+</ul>

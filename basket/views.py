@@ -3,6 +3,7 @@ from django.contrib import messages
 
 from products.models import Product
 
+
 def view_basket(request):
     """
     A view to render contents of the basket
@@ -22,7 +23,9 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to "{basket[item_id]}"')
+        messages.success(
+            request, f'Updated {product.name} quantity to "{basket[item_id]}"'
+            )
 
     else:
         basket[item_id] = quantity
@@ -43,7 +46,9 @@ def adjust_basket(request, item_id):
 
     if quantity > 0:
         basket[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to "{basket[item_id]}"')
+        messages.success(
+            request, f'Updated {product.name} quantity to "{basket[item_id]}"'
+            )
         
     else:
         basket.pop(item_id)
@@ -62,7 +67,6 @@ def remove_item_from_basket(request, item_id):
 
     basket.pop(item_id)
     messages.success(request, f'Removed {product.name} from the basket')
-
 
     request.session['basket'] = basket
     return HttpResponse(status=200)

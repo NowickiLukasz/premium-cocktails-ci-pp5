@@ -112,6 +112,8 @@ The results for testing are shown below.
     <img src="">
 
     - As a site owner i want to be able to add ingredients to the recipe that has been created.
+    <!-- Ingredients -->
+    <img src="">
 
     - As the site owner i want to be able to edit a recipe on the site 
     <!-- recipe edit page -->
@@ -120,8 +122,6 @@ The results for testing are shown below.
     - As the site owner i want to be able to remove a recipe from the site 
     <!-- recipe remove page -->
     <img src="">
-
-
 
 
 ## Manual Testing
@@ -237,9 +237,19 @@ The results for testing are shown below.
 
 
 ### Contact Us
+- The contact us link in the footer takes the user to the contact form page &check;
+- The form on the page validates correctly when all the fields are filled in &check;
+- A message informs the user that they submited a contact form &check;
 
 
 ### Newsletter
+- The newsletter link in the footer takes the user to the newsletter form page &check;
+- The newsletter form validates when all of the fields are filled &check;
+- A message informs the user that they signed up to a newsletter. &check;
+
+
+### Social Links
+- All social links take the user to a blank new page according to the link clicked &check;
 
 
 
