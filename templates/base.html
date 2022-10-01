@@ -5,8 +5,10 @@
 
 <head>
     {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="description" content="Premium Cocktails & Recipes">
+    <meta name="keywords" content="Cocktails, drinks, espresso martini, pornstar martini, recipes, books, shaken drinks, classic cocktails, Imbibe, Dale Degroff">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
@@ -36,7 +38,9 @@
     {% block extra_js%}
     {% endblock %}
 
-    <title>Premium Cocktails {% block extra_title %}{% endblock %}</title>
+    <title>
+        Premium Cocktails {% block extra_title %}{% endblock %}
+    </title>
 </head>
 
 <body>
@@ -126,7 +130,7 @@
                 <a  data-toggle="dropdown">
                     All products
                 </a>
-                <div class="dropdown-menu" aria-labelledby="all-products-link">
+                <div class="dropdown-menu" aria-labelledby="all-products">
                     <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By price(low to high)</a>
                     <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By price(high to low)</a>
                     <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">By name(A-Z)</a>

@@ -8,13 +8,17 @@ This is the [live link]() for the site - need to isert link
 - [User Experirence(UX)](#user-experience-ux)
     - [User Stories](#user-stories)
     - Site Owner
-- Site Structure
-- Database Models
-- WireFrames
-- Site features
-- Techonologies Used
-- Deployment
-- Credits
+- [Site Structure](#site-structure)
+- [Database Models](#database-models)
+- [WireFrames](#wireframes)
+- [Site features](#site-features)
+- [Business Model](#business-model)
+- [SEO](#seo)
+- [Marketing](#marketing)
+- [Techonologies Used]()
+- [Future Features]()
+- [Deployment]
+- [Credits]
 
 # User Experience (UX)
 ## User Stories
@@ -258,6 +262,29 @@ img contact us
 <img src="readme-images/features/contact-us.png">
 
 
+# Business Model
+
+This project is designed for the use of cocktail enthusiasts where they can buy drinks, study material and view recipes. 
+The business model is a Business to Customer(B2C). 
+
+# SEO
+To imporve the SEO for search engines, keywords and description was user in the HTML meta head section. 
+The images have related names to what users would search for while looking for drinks. One such name is "porn-star-martini", which is one of the most cocktails in the world. 
+
+<img src="readme-images/features/seo.png">
+
+# Marketing
+## Facebook Page
+To allow the span of the business to be broader than just a website, there will be a dedicated Facebook page. 
+
+A broad layout of the viable site is vivible in the below image. 
+
+<details>
+<img src="">
+</details>
+<br>
+
+
 ### bugs through work 
 1. 
 Images would not load. 
@@ -272,3 +299,63 @@ Images would not load.
 
 4. overlay bug-  checkout 
 -  stop workspace and refresh page 
+
+# Techonologies Used
+## Dependencies
+- asgiref==3.5.2
+- backports.zoneinfo==0.2.1
+- boto3==1.24.72
+- botocore==1.27.72
+- dj-database-url==0.5.0
+- Django==3.2
+- django-allauth==0.41.0
+- django-countries==7.3.2
+- django-crispy-forms==1.14.0
+- django-storages==1.13.1
+- gunicorn==20.1.0
+- jmespath==1.0.1
+- oauthlib==3.2.0
+- pathspec==0.10.1
+- Pillow==9.2.0
+- psycopg2-binary==2.9.3
+- python3-openid==3.2.0
+- pytz==2022.2.1
+- requests-oauthlib==1.3.1
+- s3transfer==0.6.0
+- sqlparse==0.4.2
+- stripe==4.1.0
+
+## Technologies
+- [Django]() - Project Framework
+- [Heroku]() - Deployed site server
+- [Bootstrap 4]() - Styling for the site
+- [Git Hub]() - 
+- [Git]() - 
+- [Git Pod]() - 
+- [HTML Validator]() - 
+- [CSS Validator]() - 
+- [JSHint]() - 
+- [Lighthouse]() - 
+- [AWS]() - 
+- [Balsamiq]() - 
+- [FontAwesome]() - 
+
+## Languages
+- [HTML5]() - Markup language for content creation
+- [CSS3]() - Styling language
+- [JavaScript]() - For dynamic features on the site
+- [Python3]() - Used to provide logic to the project
+
+
+
+
+# Future Features
+- Ability to ask the user to be age verified at the entry to the site as of the sales of alcohol. 
+- Ability for the site owner to reply derectly to contact us forms from the site
+- Ability to send mass emails to all newsletter subscriber
+- Allow for dynamic addition of extra ingredients in the recipe 
+
+
+# Deployment
+
+# Credits
