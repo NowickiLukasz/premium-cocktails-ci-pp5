@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'storages',
 #     'django_summernote',
 
-# ]
+]
 
 # SUMMERNOTE_CONFIG = {
 #     'summernote': {
