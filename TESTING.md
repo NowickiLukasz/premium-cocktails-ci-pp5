@@ -188,8 +188,8 @@ The results for testing are shown below.
 #### Product Reviews
 - Logged in users may leave a review on the products that you can buy &check;
 - Any user may view left reviews. &check;
-- Admin has the ability to delete a review that they deem to be vulgar or inappropriate. 
-- A message appears to notify user that the review has been left 
+- Admin has the ability to delete a review that they deem to be vulgar or inappropriate. &check;
+- A message appears to notify user that the review has been left &check;
 
 #### Basket Page
 - When a user adds an item to the basket a pop up message appears and shows the user what items area added. &check;

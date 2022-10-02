@@ -26,9 +26,9 @@
                                
             </p>
         </div>
-        <div class="col-12 col-md-6 col-sm-12 text-center">
-            <h1 class="text-black mb-4 font-weight-bold">{{recipe.name}}</h1>
-            <h4 class="text-black mb-4 font-weight-bold">Ingredients</h4>
+        <div class="col-12 col-md-6 col-sm-12">
+            <h1 class="text-black mb-4 font-weight-bold  text-center">{{recipe.name}}</h1>
+            <h4 class="text-black mb-4 font-weight-bold  text-center">Ingredients</h4>
             <hr class="w-50">
             <!-- Iterates throught indredients of the drink -->
             {% for ingredient in recipe_ingredients %}
@@ -37,9 +37,9 @@
             <hr class="w-50">
 
             <!-- displays how instructions on how to make the drink -->
-            <h4 class="text-black mb-4 font-weight-bold">Method:</h4>
+            <h4 class="text-black mb-4 font-weight-bold  text-center">Method:</h4>
             <hr class="w-50">
-            <p class="text-black">{{ recipe.method }}</p>
+            <p class="text-black">{{ recipe.method|safe }}</p>
 
             
 
