@@ -1,6 +1,6 @@
 from django import forms
 from django.forms.models import inlineformset_factory
-from django_summernote.widgets import SummernoteWidget
+# from django_summernote.widgets import SummernoteWidget
 from .models import Recipe, RecipeIngredient
 
 
@@ -10,9 +10,9 @@ class RecipeForm(forms.ModelForm):
         model = Recipe
         fields = ('name', 'method', 'image',)
 
-        widgets = {
-            'method': SummernoteWidget(attrs={'class': 'form-control'}),
-        }
+        # widgets = {
+        #     'method': SummernoteWidget(attrs={'class': 'form-control'}),
+        # }
 
 
 class RecipeIngredientForm(forms.ModelForm):

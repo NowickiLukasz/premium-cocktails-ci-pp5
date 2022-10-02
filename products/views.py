@@ -122,7 +122,7 @@ def product_details_page(request, product_id):
         'review_form': review_form,
     }
 
-    return render(request, 'products/book_details_page.html', context)
+    return render(request, 'products/product_details.html', context)
 
 
 @login_required

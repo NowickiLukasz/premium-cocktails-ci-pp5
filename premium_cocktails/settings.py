@@ -56,23 +56,23 @@ INSTALLED_APPS = [
     # Other apps
     'crispy_forms',
     'storages',
-    'django_summernote',
+#     'django_summernote',
 
-]
+# ]
 
-SUMMERNOTE_CONFIG = {
-    'summernote': {
-        'width': '100%',
+# SUMMERNOTE_CONFIG = {
+#     'summernote': {
+#         'width': '100%',
 
-        'toolbar': [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ],
-    }
-}
+#         'toolbar': [
+#             ['style', ['style']],
+#             ['font', ['bold', 'underline', 'clear']],
+#             ['fontname', ['fontname']],
+#             ['color', ['color']],
+#             ['para', ['ul', 'ol', 'paragraph']],
+#             ],
+#     }
+# }
 
 
 MIDDLEWARE = [

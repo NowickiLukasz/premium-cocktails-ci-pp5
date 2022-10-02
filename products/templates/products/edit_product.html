@@ -13,14 +13,14 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <h3 class="text-black">Product management</h3>
+            <div class="col-12">
+                <h3 class="text-black text-center">Product management</h3>
                 <h5>Edit Product</h5>
                 <hr>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 edit-product-form">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
