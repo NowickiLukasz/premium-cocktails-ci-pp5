@@ -11,7 +11,7 @@ def basket_content(request):
 
     for item_id, item_data in basket.items():
 
-        product = get_object_or_404(Product, pk = item_id)
+        product = get_object_or_404(Product, pk=item_id)
         total += item_data * product.price
         product_count += item_data
         basket_items.append({

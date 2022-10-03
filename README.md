@@ -1,13 +1,16 @@
 The purpose of this site is to allow user to be able to view a selection of pre-made cocktails, books and recipes. The user, if they so choose, may have a choice of products to purchase via the on site payment portal.
 If the user wishes, they may create an account, which will allow the user to view past purchases or leave a review on any of the products or recipes. 
+The Site Consists of 2 main sections. 
+First section is the purchasable products, books or bottled drinks. 
+Second section is the recipes. The recipes for the scope of this project will be classic 3 ingredient drinks. 
 
 ## Live Link 
-This is the [live link]() for the site - need to isert link
+This is the [live link](https://premium-cocktails.herokuapp.com/) for the site
 
 # Table of Contents
 - [User Experirence(UX)](#user-experience-ux)
     - [User Stories](#user-stories)
-    - Site Owner
+    - [Site Owner](#site-owner)
 - [Site Structure](#site-structure)
 - [Database Models](#database-models)
 - [WireFrames](#wireframes)
@@ -15,10 +18,10 @@ This is the [live link]() for the site - need to isert link
 - [Business Model](#business-model)
 - [SEO](#seo)
 - [Marketing](#marketing)
-- [Techonologies Used]()
-- [Future Features]()
-- [Deployment]
-- [Credits]
+- [Techonologies Used](#techonologies-used)
+- [Future Features](#future-features)
+- [Deployment]()
+- [Credits]()
 
 # User Experience (UX)
 ## User Stories
@@ -66,15 +69,13 @@ This is the [live link]() for the site - need to isert link
     - I want to be able to find social media links.
     - I want to be able to contact the site owner.
 
-
+## Site Owner
 - As a site owner:
 
     - I want to be able to add new products.
     - I want to be able to edit or delete products.
     - I want to be able to edit or delete recipes.
     - I want to be able to access the Django admin portal easily
-
-
 
 # Site Structure
 This project has been designed with multiple applications for the ease of manipulation of data and a logical approach to building the site with the Django framework. 
@@ -103,7 +104,6 @@ This project has been designed with multiple applications for the ease of manipu
 - Contact form
     - This app allows the users to send a message to the site owner to let them know how they view their goods and what can be imporved with new products.
 
-
 # Database Models
 This is a database schema on the connection of the database models. 
 <img src="readme-images/database/database-model.png">
@@ -116,13 +116,11 @@ This is a database schema on the connection of the database models.
 </details>
 <br>
 
-
 ### Shop Page
 <details>
 <img src="readme-images/wireframes/shop.png">
 </details>
 <br>
-
 
 ### Cocktail List Page
 
@@ -173,9 +171,6 @@ This is a database schema on the connection of the database models.
 </details>
 <br>
 
-
-
-
 # Site Features
 
 ## Navigation
@@ -185,49 +180,49 @@ The navigation section of the pages contains a logo, a search bar, link to view 
 
 The footer allows the user the contact the site owner or to signup to a site newsletter.
 
-img of account button for user and admin
 <img src="readme-images/features/account-button.png">
 
-img of footer
 <img src="readme-images/features/footer.png">
 
 ## Products Pages
 
 The initial page a user will view will be to allows them to select a category of product to view or recipes. 
 
-Img of shop page. 
 <img src="readme-images/features/shop-page.png">
 The user may select one of these and browse through items on the page. 
 
 Items that may be purchased have a a sort function. 
 
-img of sort function 
 <img src="readme-images/features/sort-function.png">
 Site admin may edit or delete unwanted items on the site. 
 
-img of edit-delete in products page
 <img src="readme-images/features/edit-delete.png">
+
 ## product details 
 
-img of product details
 <img src="readme-images/features/product-details.png">
 On this page a user may select a quantity of items they wish to purchase and add the items to the basket 
 
-img of select quantity and add basket 
 <img src="readme-images/features/quantity-selector.png">
 
 ## Register/ Log-in / Log-out
 
-Here the a user may register for the site or if tghe user has an account they may login or out of the the site. 
+Here the a user may register for the site or if the user has an account they may login or out of the the site. 
 
-Images of site log in or out
 <img src="readme-images/features/log-in.png">
+
+## Review Page
+
+A user is required to have an account set up and be logged in, in order to leave a review on a product that can be purchased.
+
+<img src="testing-images/review-log-in.png">
+
 ## Profile
 
 Here the current logged in user may view their details and view their previous purchase history 
 
-img profile page
 <img src="readme-images/features/profile-page.png">
+
 ## Basket Page
 
 A user of the site that has added items to the basket may adjust the items they have selected. 
@@ -236,7 +231,6 @@ They may remove all items if necessary
 
 The user may then proceed to the checkout page to finalise their purchase. 
 
-images of adjust items and checkout button 
 <img src="readme-images/features/shopping-basket.png">
 
 ## Checkout
@@ -245,22 +239,19 @@ A user may enter their delivery details on the form provided or if they have an 
 
 The user must fill out a card detail form which, once filled out will permit the user to purchase the items selcted
 
-img checkout
 <img src="readme-images/features/checkout.png">
 
 ## Confirmation 
 
 A user will be taken to the confirmation page once the purchase has been made. 
 
-img confirmation
 <img src="readme-images/features/confirmation.png">
+
 ## Contact Us
 
 The user will be able to fill out a form with their details and a message to the site owner. 
 
-img contact us
 <img src="readme-images/features/contact-us.png">
-
 
 # Business Model
 
@@ -280,7 +271,7 @@ To allow the span of the business to be broader than just a website, there will 
 A broad layout of the viable site is vivible in the below image. 
 
 <details>
-<img src="">
+<img src="readme-images/facebook-mockup.png">
 </details>
 <br>
 
@@ -326,25 +317,24 @@ Images would not load.
 - stripe==4.1.0
 
 ## Technologies
-- [Django]() - Project Framework
-- [Heroku]() - Deployed site server
-- [Bootstrap 4]() - Styling for the site
-- [Git Hub]() - 
-- [Git]() - 
-- [Git Pod]() - 
-- [HTML Validator]() - 
-- [CSS Validator]() - 
-- [JSHint]() - 
-- [Lighthouse]() - 
-- [AWS]() - 
-- [Balsamiq]() - 
-- [FontAwesome]() - 
+- [Django](https://www.djangoproject.com/) - Project Framework
+- [Heroku](https://id.heroku.com/login) - Deployed site server
+- [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Styling for the site
+- [Git Hub](https://github.com/) - Repository for storing code
+- [Git](https://git-scm.com/) - An open source distributed version control system
+- [Git Pod](https://gitpod.io/) - An IDE for code creation
+- [HTML Validator](https://validator.w3.org/) - Used for validating HTML code
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) - Used for validating CSS code
+- [JSHint](https://jshint.com/) - Used for validating JavaScript code
+- [AWS](https://aws.amazon.com/) - For static file hosting
+- [Balsamiq](https://balsamiq.com/) - For drawing wireframes for the project
+- [FontAwesome](https://fontawesome.com/v5/docs/) - For icons on the website
 
 ## Languages
-- [HTML5]() - Markup language for content creation
-- [CSS3]() - Styling language
-- [JavaScript]() - For dynamic features on the site
-- [Python3]() - Used to provide logic to the project
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) - Markup language for content creation
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - Styling language
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - For dynamic features on the site
+- [Python3](https://www.python.org/) - Used to provide logic to the project
 
 
 
@@ -354,7 +344,7 @@ Images would not load.
 - Ability for the site owner to reply derectly to contact us forms from the site
 - Ability to send mass emails to all newsletter subscriber
 - Allow for dynamic addition of extra ingredients in the recipe 
-
+- Allow for a search feature for ingredient names in a drop down format
 
 # Deployment
 

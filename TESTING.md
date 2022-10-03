@@ -109,19 +109,19 @@ The results for testing are shown below.
 - Recipe
     As the site owner i want to be able to add a recipe to the site 
     <!-- recipe add page -->
-    <img src="">
+    <img src="testing-images/recipe-method.png">
 
     - As a site owner i want to be able to add ingredients to the recipe that has been created.
     <!-- Ingredients -->
-    <img src="">
+    <img src="testing-images/recipe-ing.png">
 
     - As the site owner i want to be able to edit a recipe on the site 
     <!-- recipe edit page -->
-    <img src="">
+    <img src="testing-images/recipe-edit.png">
 
     - As the site owner i want to be able to remove a recipe from the site 
     <!-- recipe remove page -->
-    <img src="">
+    <img src="testing-images/recipe-edit-delete.png">
 
 
 ## Manual Testing
@@ -179,7 +179,7 @@ The results for testing are shown below.
 - Item image and decription renders correctly &check;
 - Item description renders ABV if the recipe has abv stated &check;
 - User is able to select quantity of items to add to basket. &check;
-- Buttons work correctly for adding quantity.
+- Buttons work correctly for adding quantity. &check;
 - Add to basket button works correctly &check;
 - message displays once item has been added to basket &check;
 - Reviews are shown on the bottom of the screen &check;
@@ -197,7 +197,7 @@ The results for testing are shown below.
 - The user may access the full basket details by clicking the secure checkout button in the pop up basket message &check;
 - The user may adjust the quantity of items on the basket page &check;
 - The user may remove the items entirely from the basket &check;
-- The user may go back to the shop page if they wish to buy more items 
+- The user may go back to the shop page if they wish to buy more items &check;
 - The subtotal will be shown near the secure check out button &check;
 - The amount due for payment will change accodingly to items in the basket. &check;
 - The user may procede to the payment page from the basket page &check;
@@ -210,7 +210,7 @@ The results for testing are shown below.
 - The user will be able to fill out a card details section &check;
 - The card details input will validate if the card number is not correct &check;
 - If a user has no profile details saved yet, the user may choose to save the shipping details as their profile details &check;
-- The user may complete a purchase
+- The user may complete a purchase &check;
 - The user will be prompted with a loading screen when payment is processing &check;
 - Once the payment is processed, the user will be shown a confirmation page &check;
 - The user will be sent an email with their confirmation details. &check;
