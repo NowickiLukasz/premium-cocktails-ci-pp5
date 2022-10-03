@@ -11,11 +11,19 @@ body {
     color: black;
     
 }
+/* 404 page styling  */
+
+.page_404 {
+    padding-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Text styling */
 .hero-text {
-    margin-top: 75px;
+    margin-top: 100px;
     color: white;
+    width: 75%;
 }
 
 .logo-font {
