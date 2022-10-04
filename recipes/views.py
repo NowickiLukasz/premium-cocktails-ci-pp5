@@ -66,12 +66,13 @@ def recipe_details(request, recipe_id):
 
 
 def edit_recipe(request, recipe_id):
-
     """Allows the super user to edit recipe on page"""
 
     recipe = get_object_or_404(Recipe, id=recipe_id)
     edit_form = RecipeForm(instance=recipe)
-    ingredient_formset = IngredientFormSet(queryset=RecipeIngredient.objects.filter(recipe=recipe))
+    ingredient_formset = IngredientFormSet(
+        queryset=RecipeIngredient.objects.filter(
+            recipe=recipe))
 
     if request.method == 'POST':
         edit_form = RecipeForm(request.POST, request.FILES, instance=recipe)
@@ -87,9 +88,12 @@ def edit_recipe(request, recipe_id):
             return redirect(reverse('all_recipes'))
 
         else:
-            edit_form = RecipeForm(request.POST, request.FILES, instance=recipe)
+            edit_form = RecipeForm(
+                request.POST, request.FILES, instance=recipe)
             ingredient_formset = IngredientFormSet(request.POST)
-            messages.error(request, 'Failed to update recipe, make sure the form is valid')
+            messages.error(
+                request,
+                'Failed to update recipe, make sure the form is valid')
 
     template = 'recipes/edit_recipe.html'
 

@@ -16,7 +16,9 @@ def contact_us(request):
             messages.success(request, 'Message has been sent! Thank you.')
             return redirect(reverse('home'))
         else:
-            messages.error(request, 'Failed to send message. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to send message. Please ensure the form is valid.')
     else:
         contact_form = ContactUsForm()
 
@@ -53,5 +55,3 @@ def contact_us_details(request, contact_id):
     }
 
     return render(request, template, context)
-
-    

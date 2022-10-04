@@ -10,6 +10,7 @@ from profiles.models import UserProfile
 import json
 import time
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
@@ -25,13 +26,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )  
+        )
 
     def handle_event(self, event):
         """
@@ -54,11 +55,10 @@ class StripeWH_Handler:
         shipping_details = intent.shipping
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 
-
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-            
+
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
@@ -69,8 +69,12 @@ class StripeWH_Handler:
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = (
+                    shipping_details.address.line1
+                    )
+                profile.default_street_address2 = (
+                    shipping_details.address.line2
+                    )
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
@@ -79,24 +83,23 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                        full_name__iexact=shipping_details.name,
-                        user_profile=profile,
-                        email__iexact=billing_details.email,
-                        phone_number__iexact=shipping_details.phone,
-                        country__iexact=shipping_details.address.country,
-                        postcode__iexact=shipping_details.address.postal_code,
-                        town_or_city__iexact=shipping_details.address.city,
-                        street_address1__iexact=shipping_details.address.line1,
-                        street_address2__iexact=shipping_details.address.line2,
-                        county__iexact=shipping_details.address.state,
-                        grand_total=grand_total,
-                        original_basket=basket,
-                        stripe_pid=pid,
-                    )
+                    full_name__iexact=shipping_details.name,
+                    user_profile=profile,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=shipping_details.phone,
+                    country__iexact=shipping_details.address.country,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    town_or_city__iexact=shipping_details.address.city,
+                    street_address1__iexact=shipping_details.address.line1,
+                    street_address2__iexact=shipping_details.address.line2,
+                    county__iexact=shipping_details.address.state,
+                    grand_total=grand_total,
+                    original_basket=basket,
+                    stripe_pid=pid,
+                )
                 order_exists = True
                 break
 
-                
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)

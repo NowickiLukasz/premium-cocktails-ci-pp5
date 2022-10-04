@@ -13,6 +13,7 @@ from basket.contexts import basket_content
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -28,7 +29,6 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
-
 
 
 def checkout(request):
@@ -57,7 +57,7 @@ def checkout(request):
             order.original_basket = json.dumps(basket)
             order.save()
             for item_id, item_data in basket.items():
-                
+
                 product = Product.objects.get(id=item_id)
                 order_line_item = OrderLineItem(
                     order=order,
@@ -67,7 +67,11 @@ def checkout(request):
                 order_line_item.save()
 
             request.session['save_info'] = 'save_info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse(
+                    'checkout_success',
+                    args=[
+                        order.order_number]))
         else:
             messages.error(request, "There was an issue with your form")
 
@@ -118,7 +122,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handles successful checkouts 
+    Handles successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -144,7 +148,6 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-
     messages.success(
         request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
@@ -156,7 +159,7 @@ def checkout_success(request, order_number):
 
     template = 'checkout/checkout_success.html'
     context = {
-        'order': order, 
+        'order': order,
     }
 
     return render(request, template, context)

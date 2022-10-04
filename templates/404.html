@@ -11,8 +11,14 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="overlay">
+        <div class="overlay"></div>
+        <div class="container-fluid">
             <h1 class="page_404">We're sorry, but this page does not exist.</h1>
+            <div class="my-5">
+                    <p>
+                        <a href="{% url 'shop' %}" class="shop-button btn btn-lg rounded text-uppercase py-3">Go to shop!</a>
+                    </p>
+                </div>
         </div>
 
     </div>

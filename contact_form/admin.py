@@ -9,5 +9,3 @@ class ContactUsAdmin(admin.ModelAdmin):
     list_display = (
         'name', 'content', 'email', 'created_on',
     )
-
-

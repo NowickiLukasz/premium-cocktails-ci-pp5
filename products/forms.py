@@ -15,6 +15,6 @@ class ProductReviewForm(forms.ModelForm):
     Creates the review for the selling product.
     '''
     class Meta:
-        
+
         model = ProductReview
         fields = ('title', 'user_review', )

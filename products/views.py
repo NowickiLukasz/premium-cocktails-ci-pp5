@@ -41,13 +41,15 @@ def all_products(request):
                 messages.error(request, "You did not enter any search words!")
                 return redirect(reverse('home'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
-        
+
         if 'category' in request.GET:
             categories = request.GET['category']
             products = products.filter(category__title=categories)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -103,7 +105,11 @@ def product_details_page(request, product_id):
                 product_review.save()
                 messages.success(request, ('Thank you for your review!'))
 
-                return redirect(reverse('product_details_page', args=[product.id]))
+                return redirect(
+                    reverse(
+                        'product_details_page',
+                        args=[
+                            product.id]))
             else:
                 messages.error(
                     request,
@@ -129,18 +135,22 @@ def product_details_page(request, product_id):
 def add_product(request):
     """Add product to the store"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorr, but you do not have permissions to acces this page.')
+        messages.error(
+            request,
+            'Sorr, but you do not have permissions to acces this page.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
-        
+
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added item!')
             return redirect(reverse('product_details_page', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add item. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add item. Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -157,7 +167,9 @@ def add_product(request):
 def edit_product(request, product_id):
     """Allows superuser to edit products ont he site"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorr, but you do not have permissions to access this page.')
+        messages.error(
+            request,
+            'Sorr, but you do not have permissions to access this page.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -169,7 +181,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated item!')
             return redirect(reverse('product_details_page', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update item. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update item. Please ensure the form is valid.')
 
     form = ProductForm(instance=product)
     messages.info(request, f'You are editing {product.name}')
@@ -187,7 +201,9 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """Deletes a product from the site"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorr, but you do not have permissions to acces this page.')
+        messages.error(
+            request,
+            'Sorr, but you do not have permissions to acces this page.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

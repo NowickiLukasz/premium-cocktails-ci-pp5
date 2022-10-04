@@ -9,7 +9,7 @@ def shop_page(request):
     Displays the shop main page.
     Displays sections for books, cocktails and recipes
     """
-    
+
     return render(request, 'shop/shop.html')
 
 
@@ -22,7 +22,7 @@ def newsletter_application(request):
             newsletter.save()
             messages.success(request, 'You have signed up to our newsletter.')
             return redirect(reverse('home'))
-    
+
     else:
         newsletter = NewsletterForm()
 
