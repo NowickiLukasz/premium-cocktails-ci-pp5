@@ -5,12 +5,17 @@ html {
 body {
     background: url('/media/homepage-background.jpg') no-repeat center center;
     background-size: cover;
-    /* height: calc(100vh + 164); */
     margin-top: 165px;
     font-family: 'Noto Sans', sans-serif;
     color: black;
     
 }
+
+/* All auth styling */
+/* .login {
+    width: auto;
+} */
+
 /* 404 page styling  */
 
 .page_404 {
