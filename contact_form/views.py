@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import ContactUs
 
@@ -30,6 +31,7 @@ def contact_us(request):
     return render(request, template, context)
 
 
+@login_required
 def contact_us_list(request):
     """Allows the site owner to view users submisions"""
     submitions = ContactUs.objects.all()
@@ -43,6 +45,7 @@ def contact_us_list(request):
     return render(request, template, context)
 
 
+@login_required
 def contact_us_details(request, contact_id):
     """Allows the site owner to view users submisions details"""
 

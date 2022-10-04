@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Recipe, RecipeIngredient
 from .forms import RecipeForm, RecipeIngredientForm, IngredientFormSet
@@ -18,7 +19,7 @@ def all_recipes(request):
     template = 'recipes/recipes.html'
     return render(request, template, context)
 
-
+@login_required
 def add_recipe(request):
     """Allows superuser to add a recipe to the site"""
 
@@ -64,7 +65,7 @@ def recipe_details(request, recipe_id):
     template = 'recipes/recipe_details.html'
     return render(request, template, context)
 
-
+@login_required
 def edit_recipe(request, recipe_id):
     """Allows the super user to edit recipe on page"""
 
@@ -104,7 +105,7 @@ def edit_recipe(request, recipe_id):
     }
     return render(request, template, context)
 
-
+@login_required
 def delete_recipe(request, recipe_id):
     """Deletes a recipe from the site"""
     recipe = get_object_or_404(Recipe, pk=recipe_id)

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .forms import NewsletterForm
 
@@ -13,6 +14,7 @@ def shop_page(request):
     return render(request, 'shop/shop.html')
 
 
+@login_required
 def newsletter_application(request):
     """Send a newsletter requast to site owner"""
 
