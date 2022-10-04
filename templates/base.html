@@ -126,7 +126,7 @@
         </div>
 
         <div class="row bg-white pt-lg-2 d-none d-lg-flex p-0">
-            <div class="text-center all-products w-50">
+            <div class="text-center w-50" id="all-products">
                 <a  data-toggle="dropdown">
                     All products
                 </a>
@@ -165,7 +165,7 @@
     
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}
