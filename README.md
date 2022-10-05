@@ -450,7 +450,7 @@ To set up the project to send emails and to use a Google account as an SMTP serv
 
 8. You will also need to set the variables EMAIL_HOST_PASS and EMAIL_HOST_USER in your production instance, for example Heroku
 
-## Local Deployment
+
 
 
 # Credits
