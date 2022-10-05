@@ -19,6 +19,7 @@ def all_recipes(request):
     template = 'recipes/recipes.html'
     return render(request, template, context)
 
+
 @login_required
 def add_recipe(request):
     """Allows superuser to add a recipe to the site"""
@@ -65,6 +66,7 @@ def recipe_details(request, recipe_id):
     template = 'recipes/recipe_details.html'
     return render(request, template, context)
 
+
 @login_required
 def edit_recipe(request, recipe_id):
     """Allows the super user to edit recipe on page"""
@@ -104,6 +106,7 @@ def edit_recipe(request, recipe_id):
         'ingredient_formset': ingredient_formset,
     }
     return render(request, template, context)
+
 
 @login_required
 def delete_recipe(request, recipe_id):
