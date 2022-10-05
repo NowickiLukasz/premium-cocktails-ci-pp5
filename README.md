@@ -276,21 +276,6 @@ A broad layout of the viable site is vivible in the below image.
 <br>
 
 
-### bugs through work 
-1. 
-Images would not load. 
-- found that i needed to have an if statement to load images if there was no image loaded for a certain item the page qould crash
-
-
-2. Needs to be fixed 
-- header section is very tall
-
-3. Sorting function would not work throught te development. 
-- Had to place the category into the products view rather than the shop one
-
-4. overlay bug-  checkout 
--  stop workspace and refresh page 
-
 # Techonologies Used
 ## Dependencies
 - asgiref==3.5.2
@@ -346,6 +331,16 @@ Images would not load.
 - Allow for dynamic addition of extra ingredients in the recipe 
 - Allow for a search feature for ingredient names in a drop down format
 
-# Deployment
+# bugs through work 
+1. Images would not load. 
+- found that i needed to have an if statement to load images if there was no image loaded for a certain item the page qould crash
 
-# Credits
+
+2. Needs to be fixed 
+- header section is very tall
+
+3. Sorting function would not work throught te development. 
+- Had to place the category into the products view rather than the shop one
+
+
+

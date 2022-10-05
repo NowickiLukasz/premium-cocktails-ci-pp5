@@ -5,11 +5,103 @@ The results for testing are shown below.
 ## Validation
 - HTML
 
+    <details>
+    <summary> Shop Page</summary>
+    <img src="testing-images/validation/html/shop-page.png">
+    </details>
+    <br>
+
+    <details>
+    <summary> Register Page</summary>
+    <img src="testing-images/validation/html/register-page.png">
+    </details>
+    <br>
+    
+    <details>
+    <summary> Recipes List Page</summary>
+    <img src="testing-images/validation/html/recipes-list-page.png">
+    </details>
+    <br>
+
+    <details>
+    <summary> Products Page</summary>
+    <img src="testing-images/validation/html/products-page.png">
+    </details>
+    <br>
+    
+    <details>
+    <summary> Products Details Page</summary>
+    <img src="testing-images/validation/html/products-details-page.png">
+    </details>
+    <br>
+
+    <details>
+    <summary> Login/out Page</summary>
+    <img src="testing-images/validation/html/login-page.png">
+    </details>
+    <br>
+
+    <details>
+    <summary> Home Page</summary>
+    <img src="testing-images/validation/html/home-page.png">
+    </details>
+    <br>
+ 
+    <details>
+    <summary> Contact Us Page</summary>
+    <img src="testing-images/validation/html/contact-us-page.png">
+    </details>
+    <br>
+
+    <details>
+    <summary> Cocktail List Page</summary>
+    <img src="testing-images/validation/html/cocktails-list-page.png">
+    </details>
+    <br>
+
+    <details>
+    <summary> Books List Page</summary>
+    <img src="testing-images/validation/html/books-list-page.png">
+    </details>
+    <br>
+ 
+    <details>
+    <summary> Basket Page</summary>
+    <img src="testing-images/validation/html/basket-page.png">
+    </details>
+    <br>
+ 
 - CSS
+    <details>
+    <summary>CSS</summary>
+    <img src="testing-images/validation/css/css-validation.png">
+    </details>
+    <br>
 
 - Python
 
+    - Python testing was done throught the use of pep8 complience with the GitPod workspace. 
+
+
+        [Autopep8](https://pypi.org/project/autopep8/) was used to aid in the validation of the code. 
+
+        Each python file created by the user has been checked and adjusted manualy via the <br>
+        <code>$ autopep8 --in-place --aggressive --aggressive filename</code> command. 
+
+        For each of the files, the command realigns and formats the entire file to conform with PEP8 rules.
+
 - JavaScript
+    <details>
+    <summary>Country Fields</summary>
+    <img src="testing-images/validation/js/country-field-validation.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Stripe</summary>
+    <img src="testing-images/validation/js/stripe-elements-validation.png">
+    </details>
+    <br>
 
 - LightHouse
 
