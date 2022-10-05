@@ -20,8 +20,9 @@ This is the [live link](https://premium-cocktails.herokuapp.com/) for the site
 - [Marketing](#marketing)
 - [Techonologies Used](#techonologies-used)
 - [Future Features](#future-features)
-- [Deployment]()
-- [Credits]()
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 # User Experience (UX)
 ## User Stories
@@ -275,6 +276,8 @@ A broad layout of the viable site is vivible in the below image.
 </details>
 <br>
 
+# Testing
+All of the manual testing can be found in the [TESTING](TESTING.md) file 
 
 # Techonologies Used
 ## Dependencies
@@ -331,17 +334,16 @@ A broad layout of the viable site is vivible in the below image.
 - Allow for dynamic addition of extra ingredients in the recipe 
 - Allow for a search feature for ingredient names in a drop down format
 
-# bugs through work 
+# Bugs
 1. Images would not load. 
-- found that i needed to have an if statement to load images if there was no image loaded for a certain item the page qould crash
-
-
-2. Needs to be fixed 
-- header section is very tall
+- I found that i needed to have an if statement to load images if there was no image loaded for a certain item the page would crash
 
 3. Sorting function would not work throught te development. 
-- Had to place the category into the products view rather than the shop one
+- Had to place the category into the products view rather than the shop view
 
+4. Heroku database updates
+- Through this project heroku updated the database urls. This caused the project to shut down twice.
+The solution was to go to heroku, copy the new database url and replace it in the gitpod variables.
 
 # Deployment
 
@@ -437,8 +439,8 @@ To set up the project to send emails and to use a Google account as an SMTP serv
 <br>![App password](readme-images/emails/email-pass.png)
 
 4. Click create and a 16 digit password will be generated, note the password down
-5. In the env.py file, create an environment variable called EMAIL_HOST_PASS with the 16 digit password
-6. In the env.py file, create an environment variable called EMAIL_HOST_USER with the email address of the gmail account
+5. In the heroku variables, create an environment variable called EMAIL_HOST_PASS with the 16 digit password
+6. In the heroku variables, create an environment variable called EMAIL_HOST_USER with the email address of the gmail account
 7. Set and confirm the following values in the settings.py file to successfully send emails
 <br><code>EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'</code>
 <br><code>EMAIL_USE_TLS = True</code>
@@ -451,6 +453,39 @@ To set up the project to send emails and to use a Google account as an SMTP serv
 8. You will also need to set the variables EMAIL_HOST_PASS and EMAIL_HOST_USER in your production instance, for example Heroku
 
 
+## Local Deployment
+To run this project locally, you will need to clone the repository
+1. Login to GitHub (https://wwww.github.com)
+2. Select the repository premium-cocktails-ci-pp5
+3. Click the Code button and copy the HTTPS url, for example: https://github.com/NowickiLukasz/premium-cocktails-ci-pp5.git
+4. In your IDE, open a terminal and run the git clone command, for example 
+
+    ```git clone https://github.com/NowickiLukasz/premium-cocktails-ci-pp5.git```
+5. The repository will now be cloned in your workspace
+    6. Open the Gitpod Page, sign in to your account, go to settings and add variables that are below. 
+<br>
+"SECRET_KEY" = 'TO BE ADDED BY USER'
+"STRIPE_PUBLIC_KEY" = 'TO BE ADDED BY USER'
+"STRIPE_SECRET_KEY" = 'TO BE ADDED BY USER'
+"STRIPE_WH_SECRET" = 'TO BE ADDED BY USER'
+"AWS_ACCESS_KEY_ID" = 'TO BE ADDED BY USER'
+"AWS_SECRET_ACCESS_KEY" = 'TO BE ADDED BY USER'
+"EMAIL_HOST_USER" = 'TO BE ADDED BY USER'
+"EMAIL_HOST_PASS" = 'TO BE ADDED BY USER'
+"USE_AWS" = 'TO BE ADDED BY USER'
+"DATABASE_URL" = 'TO BE ADDED BY USER'
+"DEVELOPMENT"  = 'True'
+
+6. Some values for the environment variables above are described in different sections of this readme
+7. Install the relevant packages as per the requirements.txt file
+8. In the settings.py ensure the connection is set to either the Heroku postgres database or the local sqllite database
+9. Ensure debug is set to true in the settings.py file for local development
+10. Add localhost/127.0.0.1 to the ALLOWED_HOSTS variable in settings.py
+11. Run "python3 manage.py showmigrations" to check the status of the migrations
+12. Run "python3 manage.py migrate" to migrate the database
+13. Run "python3 manage.py createsuperuser" to create a super/admin user
+14. Run manage.py loaddata db.json to load the product data into the database
+15. Start the application by running <code>python3 manage.py runserver</code>
 
 
 # Credits
@@ -458,3 +493,5 @@ To set up the project to send emails and to use a Google account as an SMTP serv
 - Cocktail images - https://www.punch.com
 - Cocktail books - https://www.cocktailkingdon.com
 - Cocktail bottles  - https://www.cosmopolitan.com/uk/worklife/g37664570/best-bottled-cocktails/
+- Review template - Inspiration from django blog CI project
+- [Readme deployment layout ](https://github.com/dannymagnus/CI_MS5_Ecomm/blob/main/README.md)

@@ -1,6 +1,31 @@
-The results for testing are shown below.
-
+# Testing
 # Table of Content
+- [Validation](#validation)
+    - HTML
+    - CSS
+    - Python
+    - JavaScript
+    - Lighthouse
+- [Testing User Stories](#testing-user-stories)
+- [Manual Testing](#manual-testing)
+    - Navigation Bar
+    - Footer
+    - Home Page
+    - Register
+    - Log-in/ Log out
+- [Products](#product)
+    - Shop Page
+    - Products Page
+    - Product Details Page
+    - Product Reviews
+    - Basket Page
+    - Checkout Page
+    - Profile Page
+    - Shop Management
+- [Contact Us](#contact-us)
+- [Newsletter](#newsletter)
+- [Social Links](#social-links)
+
 
 ## Validation
 - HTML
@@ -104,6 +129,58 @@ The results for testing are shown below.
     <br>
 
 - LightHouse
+
+    <details>
+    <summary>Homepage</summary>
+    <img src="testing-images/lighthouse/homepage-desktop.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Shop Page</summary>
+    <img src="testing-images/lighthouse/shop-desktop.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Product List</summary>
+    <img src="testing-images/lighthouse/product-list-desktop.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Product Details</summary>
+    <img src="testing-images/lighthouse/product-details-desktop.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Contact Us</summary>
+    <img src="">
+    </details>
+    <br>
+
+    <details>
+    <summary>Newsletter</summary>
+    <img src="testing-images/lighthouse/newsletter-desktop.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Basket</summary>
+    <img src="testing-images/lighthouse/basket-desktop.png">
+    </details>
+    <br>
+
+    <details>
+    <summary>Checkout</summary>
+    <img src="testing-images/lighthouse/checkout-desktop.png">
+    </details>
+    <br>
+    
+
+
+    
 
 ## Testing User Stories
 - General

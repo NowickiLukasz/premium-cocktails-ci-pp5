@@ -13,9 +13,9 @@
     <div class="overlay"></div>
     <h1 class="text-center">Newsletter</h1>
     <hr class="w-50">
-    <h3 class="ml-5">Sign up here for a news letter!</h3>
+    <h3 class="ml-5 text-center">Sign up here for a news letter!</h3>
     <div class="container-fluid">
-        <form class="w-50 ml-5" method="POST" action="{% url 'newsletter' %}" enctype="multipart/form-data">
+        <form class="ml-5" method="POST" action="{% url 'newsletter' %}" enctype="multipart/form-data">
             {% csrf_token %}
             {{ newsletter|crispy }}
 
