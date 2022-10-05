@@ -21,9 +21,10 @@
                 <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ recipe.name }}">
             {% endif %}
             <p>
+                {% if user.is_superuser %}
                 <small><a href="{% url 'edit_recipe' recipe.id %}">Edit</a></small>
                 <small><a class="text-danger" href="{% url 'delete_recipe' recipe.id %}">Delete</a></small>
-                               
+                {% endif %}
             </p>
         </div>
         <div class="col-12 col-md-6 col-sm-12">
