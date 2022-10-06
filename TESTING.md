@@ -156,7 +156,7 @@
 
     <details>
     <summary>Contact Us</summary>
-    <img src="">
+    <img src="testing-images/lighthouse/contact-us-desktop.png">
     </details>
     <br>
 

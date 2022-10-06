@@ -39,7 +39,7 @@ This is the [live link](https://premium-cocktails.herokuapp.com/) for the site
     - I want to be able to be able to view product detail so I can find information about priceand description.
     - I want to be able to complete the checkout process and be able to enter payment information easily.
     - I want to be able to view a confirmation of my order once the checkout process is complete.
-    - I want to be able to received an email confirmation of my order. -- mebe
+    - I want to be able to received an email confirmation of my order.
     - I want to be able to read reviews from previous users of the product.
     - I want to be able to register easily for an account.
     - I want to be able to add products to my shopping basket.
@@ -257,7 +257,7 @@ The user will be able to fill out a form with their details and a message to the
 # Business Model
 
 This project is designed for the use of cocktail enthusiasts where they can buy drinks, study material and view recipes. 
-The business model is a Business to Customer(B2C). 
+The business model is a Business to Customer(B2C). The market this project aims to attact to is those of 25 and over, as this age group has disposable income and are willing to spend more money on higher quality products and those specialised in the field may come tot he site to do research in the future.  
 
 # SEO
 To imporve the SEO for search engines, keywords and description was user in the HTML meta head section. 
@@ -384,6 +384,20 @@ The below works on the assumption that you already have an account with [Heroku]
 5. From your editor, go to your projects settings.py file and copy the SECRET_KEY variable. Add this to the same name variable under the Heroku App's config vars.
     * left box under config vars (variable KEY) = SECRET_KEY
     * right box under config vars (variable VALUE) = Value copied from settings.py in project.
+
+## Heroku Deploy
+1. Install gunicorn, add it to the requirements.tx file using the command pip3 freeze > requirements.txt
+2. From the CLI login to Heroku using the command heroku git:remote -a premium_cocktails
+3. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a premium_cocktails
+4. Push the code to Heroku using the command git push heroku master
+5. Set environment variables in Heroku
+![Heroku variables](readme-images/heroku-deploy/config-vars.png)
+6. Connect the app to GitHub and enable automatic deployment
+![Auto Deploy](readme-images/heroku-deploy/auto-deploy.png)
+
+7. Click deploy to deploy your application to Heroku for the first time
+8. Click on the link provided to access the application
+
 
 ## Amazon WebServices
 1. Create an account at aws.amazon.com
