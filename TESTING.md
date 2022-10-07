@@ -22,6 +22,7 @@
     - Checkout Page
     - Profile Page
     - Shop Management
+- [Admin]()
 - [Contact Us](#contact-us)
 - [Newsletter](#newsletter)
 - [Social Links](#social-links)
@@ -404,6 +405,52 @@
 - The edit button works correctly and allows the user to update the product &check;
 - The create recipe button work correctly and allows the user to add a product &check;
 
+### Admin
+The admin panel displays changes made to the front end of the application for the admin user.
+This updates accordingly to the changes made, new products added and if items deleted, this is reflected in the admin panel. 
+
+<details>
+<summary>Admin Contact Form</summary>
+<img src="testing-images/admin/admin-contact-us.png">
+</details>
+<br>
+
+<details>
+<summary>Admin Ingredients</summary>
+<img src="testing-images/admin/admin-ingred.png">
+</details>
+<br>
+
+<details>
+<summary>Newsletter</summary>
+<img src="testing-images/admin/admin-newsletter.png">
+</details>
+<br>
+
+<details>
+<summary>Admin Previous Orders</summary>
+<img src="testing-images/admin/admin-prev-orders.png">
+</details>
+<br>
+
+<details>
+<summary>Admin Products</summary>
+<img src="testing-images/admin/admin-products.png">
+</details>
+<br>
+
+<details>
+<summary>Admin Recipes</summary>
+<img src="testing-images/admin/admin-recipes.png">
+</details>
+<br>
+
+<details>
+<summary>Admin Reviews</summary>
+<img src="testing-images/admin/admin-reviews.png">
+</details>
+<br>
+
 
 ### Contact Us
 - The contact us link in the footer takes the user to the contact form page &check;
@@ -420,6 +467,11 @@
 ### Social Links
 - All social links take the user to a blank new page according to the link clicked &check;
 
+
+### Deployment Comparison
+
+The site has been compared page by page from the development and deployed sites in order to view that the site is consistent with the development design. 
+Each page has been found to be identical in design and in how it displays in the deployed state.
 
 
 
