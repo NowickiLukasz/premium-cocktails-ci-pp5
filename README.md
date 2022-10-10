@@ -375,6 +375,15 @@ This bug only affects the front end, the admin panel reflects that only 1 recipe
 </details>
 <br>
 
+7. Mobile Header icons DOnt display inline
+- This is a current bug. All the icons work as intended. However their styling causes them to stack in an awkward way. 
+
+<details>
+<summary>Mobile Header</summary>
+<img src="readme-images/bugs/mobile-header.png">
+</details>
+<br>
+
 # Deployment
 
 The deployment steps and actions required in order to start this project up can be found in the [Deployment](DEPLOYMENT.md) file attatched here. 

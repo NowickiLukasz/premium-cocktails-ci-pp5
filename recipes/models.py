@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 MEASURE_UNIT = [
     ('ML', 'ML'),
     ('OZ', 'OZ'),
+    ('DASH', 'DASH')
 ]
 
 

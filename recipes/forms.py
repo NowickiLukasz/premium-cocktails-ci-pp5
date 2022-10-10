@@ -22,11 +22,6 @@ class RecipeIngredientForm(forms.ModelForm):
             'placeholder': 'Enter quantity here'
         })
     )
-    # unit = forms.CharField(
-    #     widget=forms.TextInput(attrs={
-    #         'placeholder': 'Enter measurement unit here'
-    #     })
-    # )
 
     class Meta:
         model = RecipeIngredient
