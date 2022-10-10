@@ -1,27 +1,4 @@
-# Deployment
-
-## Setting up the Workspace:
-
-1. Install Django with version 3.2:
-    * ```pip install django3.2 ```
-2. Install gunicorn:
-    * ```pip install gunicorn```
-3. Install supporting libraries:
-    * ```pip install dj_database_url psycopg2```
-4. Create requirements.txt:
-    * ```pip freeze --local > requirements.txt```
-5. Create an empty folder for your project in your chosen location.
-6. Create a project in the above folder:
-    * django-admin startproject <PROJECT_NAME> 
-7. Create an app within the project:
-    * ```python manage.py startapp APP_NAME``` 
-8. Add a new app to the list of installed apps in setting.py
-9. Migrate changes: 
-    * ```python manage.py migrate```
-10. Test server works locally: 
-    * ```python manage.py runserver```  (You should see the default Django success page)
-11. Run ```python3 manage.py createsuperuser``` to create a super/admin user
-12. Run ```python3 manage.py loaddata db.json``` to load the database. 
+# Deployments
 
 ## Create Heroku App:
 The below works on the assumption that you already have an account with [Heroku](https://id.heroku.com/login) and are already signed in.

@@ -356,6 +356,25 @@ This allowed for the systematic view of what user stories were completed, which 
 - Through this project heroku updated the database urls. This caused the project to shut down twice.
 The solution was to go to heroku, copy the new database url and replace it in the gitpod variables.
 
+5. Quantity selector buttons stack. 
+- This is a current bug in the mobile view in the basket page. The buttons work and can adjust the quantity, however not very appealing. 
+
+<details>
+<summary>Quantity buttons</summary>
+<img src="readme-images/bugs/basket-quantity.png">
+</details>
+<br>
+
+6. Form confirmation toasts 
+- This is a current bug. The bug occurs when a recipe is submited. A toast message is displayed 3 times instead of 1 time. 
+This bug only affects the front end, the admin panel reflects that only 1 recipe has been created 
+
+<details>
+<summary>Toasts</summary>
+<img src="readme-images/bugs/recipe-extra-fields.png">
+</details>
+<br>
+
 # Deployment
 
 The deployment steps and actions required in order to start this project up can be found in the [Deployment](DEPLOYMENT.md) file attatched here. 

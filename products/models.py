@@ -24,7 +24,11 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
     description = models.TextField()
-    abv = models.DecimalField(max_digits=3, decimal_places=1)
+    abv = models.DecimalField(
+        max_digits=3,
+        decimal_places=1,
+        help_text="ABV stands for Alcohol By Volume"
+    )
     has_abv = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
