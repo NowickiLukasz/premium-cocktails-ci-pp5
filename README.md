@@ -4,8 +4,12 @@ The Site Consists of 2 main sections.
 First section is the purchasable products, books or bottled drinks. 
 Second section is the recipes. The recipes for the scope of this project will be classic 3 ingredient drinks. 
 
+<img src="readme-images/am-i-responsive.png">
+
+
 ## Live Link 
 This is the [live link](https://premium-cocktails.herokuapp.com/) for the site
+[Repository](https://github.com/NowickiLukasz/premium-cocktails-ci-pp5)
 
 # Table of Contents
 - [User Experirence(UX)](#user-experience-ux)
