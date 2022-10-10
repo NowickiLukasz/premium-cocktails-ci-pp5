@@ -3,6 +3,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+MEASURE_UNIT = [
+    ('ML', 'ML'),
+    ('OZ', 'OZ'),
+]
+
+
 class Recipe(models.Model):
     user = models.ForeignKey(
         User,
@@ -24,7 +30,7 @@ class RecipeIngredient(models.Model):
         related_name='ingredients')
     name = models.CharField(max_length=50, blank=False, null=False)
     quantity = models.PositiveSmallIntegerField()
-    unit = models.CharField(max_length=50)
+    unit = models.CharField(max_length=50, choices=MEASURE_UNIT, default='ML')
 
     def __str__(self):
         return self.name
