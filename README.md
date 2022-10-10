@@ -18,6 +18,7 @@ This is the [live link](https://premium-cocktails.herokuapp.com/) for the site
 - [Business Model](#business-model)
 - [SEO](#seo)
 - [Marketing](#marketing)
+- [Kanban Board](#kanban-board)
 - [Techonologies Used](#techonologies-used)
 - [Future Features](#future-features)
 - [Testing](#testing)
@@ -304,6 +305,16 @@ All of the manual testing can be found in the [TESTING](TESTING.md) file
 - sqlparse==0.4.2
 - stripe==4.1.0
 
+### Kanban Board
+The agile methodology used for this project was a kanban board. 
+This allowed for the systematic view of what user stories were completed, which were still needed to be done and what was currently in progress. 
+
+<details>
+<summary>Kanban Board</summary>
+<img src="readme-images/kanban-board.png">
+</details>
+<br>
+
 ## Technologies
 - [Django](https://www.djangoproject.com/) - Project Framework
 - [Heroku](https://id.heroku.com/login) - Deployed site server
@@ -356,3 +367,4 @@ The deployment steps and actions required in order to start this project up can 
 - Cocktail bottles  - https://www.cosmopolitan.com/uk/worklife/g37664570/best-bottled-cocktails/
 - Review template - Inspiration from django blog CI project
 - [Readme deployment layout ](https://github.com/dannymagnus/CI_MS5_Ecomm/blob/main/README.md)
+- [Code Institute - Boutique Ado Project](https://codeinstitute.net/ie/)

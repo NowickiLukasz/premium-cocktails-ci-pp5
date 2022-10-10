@@ -23,7 +23,7 @@ class RecipeIngredient(models.Model):
         on_delete=models.CASCADE,
         related_name='ingredients')
     name = models.CharField(max_length=50, blank=False, null=False)
-    quantity = models.IntegerField()
+    quantity = models.PositiveSmallIntegerField()
     unit = models.CharField(max_length=50)
 
     def __str__(self):
